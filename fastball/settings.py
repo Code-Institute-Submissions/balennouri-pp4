@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6mo_7^l9xsx^olul%w8ad273@^9egrih+mqgh3=lez24#9*z6h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io',
 '8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io',
@@ -136,6 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = ['static/']
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
