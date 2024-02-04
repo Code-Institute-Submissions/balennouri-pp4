@@ -1,0 +1,18 @@
+---
+name: FastBall User Story Template
+about: Custom template for pp4 user stories
+title: ''
+labels: ''
+assignees: ''
+
+---
+
+As a **role** I can **capability** so that **received benefit**
+
+### Acceptance criteria
+
+- Acceptance criteria 1
+
+- Acceptance criteria 2
+
+- Acceptance criteria 3
