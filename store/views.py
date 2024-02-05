@@ -46,8 +46,8 @@ def register_user(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.Cleaned_data['username']
-            password = form.Cleaned_data['password1']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
             # Login the user
             user = authenticate(username=username, password=password)
             login(request, user)
