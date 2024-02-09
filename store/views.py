@@ -10,50 +10,70 @@ from django import forms
 
 # Create your views here.
 def category(request, foo):
-    foo = foo.replace('-', ' ')
+    foo = foo.replace("-", " ")
     try:
         category = Category.objects.get(name=foo)
         products = Product.objects.filter(category=category)
-        return render(request, 'category.html', {'products': products, 'category':category},)
+        return render(
+            request,
+            "category.html",
+            {"products": products, "category": category},
+        )
     except:
         messages.success(request, ("That Category Doesn't Exist.."))
-        return redirect('home')
+        return redirect("home")
 
 
-def product(request,pk):
+def product(request, pk):
     product = Product.objects.get(id=pk)
-    return render(request, 'product.html', {'product':product},)
+    return render(
+        request,
+        "product.html",
+        {"product": product},
+    )
 
 
 def home(request):
     products = Product.objects.all()
-    return render(request, 'home.html', {'products':products},)
+    return render(
+        request,
+        "home.html",
+        {"products": products},
+    )
 
 
 def about(request):
-    return render(request, 'about.html', {},)
+    return render(
+        request,
+        "about.html",
+        {},
+    )
 
 
 def login_user(request):
     if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST["username"]
+        password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             messages.success(request, ("You Have Been Logged In"))
-            return redirect('home')
+            return redirect("home")
         else:
             messages.success(request, ("There Was An Error, Please Try Again..."))
-            return redirect('login')
+            return redirect("login")
     else:
-        return render(request, 'login.html', {},)
+        return render(
+            request,
+            "login.html",
+            {},
+        )
 
 
 def logout_user(request):
     logout(request)
     messages.success(request, ("You Have Been Logged Out!"))
-    return redirect('home')
+    return redirect("home")
 
 
 def register_user(request):
@@ -62,16 +82,21 @@ def register_user(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password1']
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password1"]
             # Login the user
             user = authenticate(username=username, password=password)
             login(request, user)
             messages.success(request, ("You Have Registered Successfully!! Welcome"))
-            return redirect('home')
+            return redirect("home")
         else:
-            messages.success(request, ("Whoops! There was a problem registering, Please try again."))
-            return redirect('register')
+            messages.success(
+                request, ("Whoops! There was a problem registering, Please try again.")
+            )
+            return redirect("register")
     else:
-        return render(request, 'register.html', {'form':form},)
-        
+        return render(
+            request,
+            "register.html",
+            {"form": form},
+        )

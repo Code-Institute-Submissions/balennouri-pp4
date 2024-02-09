@@ -20,7 +20,7 @@ class Customer(models.Model):
     password = models.CharField(max_length=100)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+        return f"{self.first_name} {self.last_name}"
 
 
 # All the product on the page
@@ -28,8 +28,8 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
-    description = models.TextField(default='', blank=True, null=True)
-    image = CloudinaryField('image', default='placeholder')
+    description = models.TextField(default="", blank=True, null=True)
+    image = CloudinaryField("image", default="placeholder")
     # Add sales product
     is_sales = models.BooleanField(default=False)
     sales_price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
@@ -38,7 +38,7 @@ class Product(models.Model):
         return self.name
 
 
-# Customer Orders 
+# Customer Orders
 class Order(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
@@ -50,4 +50,3 @@ class Order(models.Model):
 
     def __str__(self):
         return self.product
-        
