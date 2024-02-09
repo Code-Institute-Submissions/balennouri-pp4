@@ -32,7 +32,8 @@ class Product(models.Model):
     image = CloudinaryField("image", default="placeholder")
     # Add sales product
     is_sales = models.BooleanField(default=False)
-    sales_price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
+    sales_price = models.DecimalField(
+        default=0, decimal_places=2, max_digits=6)
 
     def __str__(self):
         return self.name

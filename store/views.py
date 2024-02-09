@@ -60,7 +60,10 @@ def login_user(request):
             messages.success(request, ("You Have Been Logged In"))
             return redirect("home")
         else:
-            messages.success(request, ("There Was An Error, Please Try Again..."))
+            messages.success(
+                request, (
+                    "There Was An Error, Please Try Again...")
+                    )
             return redirect("login")
     else:
         return render(
@@ -87,11 +90,15 @@ def register_user(request):
             # Login the user
             user = authenticate(username=username, password=password)
             login(request, user)
-            messages.success(request, ("You Have Registered Successfully!! Welcome"))
+            messages.success(request, (
+                "You Have Registered Successfully!! Welcome")
+                )
             return redirect("home")
         else:
             messages.success(
-                request, ("Whoops! There was a problem registering, Please try again.")
+                request, (
+                    "Whoops! There was a problem registering,\
+                    Please try again.")
             )
             return redirect("register")
     else:
