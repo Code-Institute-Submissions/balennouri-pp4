@@ -3,7 +3,7 @@ import datetime
 from cloudinary.models import CloudinaryField
 
 
-# Categories of shoes
+# Categories of balls
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
@@ -50,3 +50,4 @@ class Order(models.Model):
 
     def __str__(self):
         return self.product
+        

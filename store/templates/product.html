@@ -33,10 +33,23 @@
 
                         {% endif %}
 
-                        <br/><br/>
-
+                        <br><br>
+                        <div class="row justify-content-center">
+                            <div class="col-md-2">Quantity:</div>
+                            <div class="col-md-2">
+                                <select class="form-select form-select-sm" id="cart-qty">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br /><br>
                         <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
-                        <button type="button" value="{{ product.id }}" class="btn btn-secondary" id="add-cart">Add To Cart</button>
+                        <button type="button" value="{{ product.id }}" class="btn btn-secondary" id="add-cart">Add To
+                            Cart</button>
                     </center>
                 </div>
             </div>
@@ -45,21 +58,22 @@
 </div>
 
 <script>
-    // Check if button is pressed
-    $(document).on('click', '#add-cart', function(e){
+    // Check if button is pressed, Checks for product id and qty to put it in the cart
+    $(document).on('click', '#add-cart', function (e) {
         e.preventDefault();
         $.ajax({
             type: 'Post',
             url: "{% url 'cart_add' %}",
             data: {
                 product_id: $('#add-cart').val(),
+                product_qty: $('#cart-qty option:selected').text(),
                 csrfmiddlewaretoken: '{{ csrf_token }}',
                 action: 'post'
             },
-            success: function(json){
+            success: function (json) {
                 document.getElementById("cart_quantity").innerHTML = json.qty
             },
-            error: function(xhr, errmsg, err){
+            error: function (xhr, errmsg, err) {
 
             }
         });
