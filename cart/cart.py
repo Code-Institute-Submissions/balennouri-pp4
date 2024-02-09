@@ -1,25 +1,22 @@
 from store.models import Product
 
 
-# Class for cart, For the quantity, and product id
 class Cart:
     def __init__(self, request):
+        """
+        Gets the current session key if it exists,
+        If the user is new user wint have a session key,
+        Makes sure cart is available on all pages of site
+        """
         self.session = request.session
-
-        # Get the current session key if it exists
         cart = self.session.get("session_key")
-
-        # If the user is new, no session key!  Create one!
         if "session_key" not in request.session:
             cart = self.session["session_key"] = {}
-
-        # Make sure cart is available on all pages of site
         self.cart = cart
 
     def add(self, product, quantity):
         product_id = str(product.id)
         product_qty = str(quantity)
-        # Logic for cart
         if product_id in self.cart:
             pass
         else:
@@ -31,11 +28,14 @@ class Cart:
         return len(self.cart)
 
     def get_prods(self):
-        # Get the ids form the cart
+        """
+        Gets the Ids from the cart,
+        From the Id that is taken, use it to lookup the product in
+        the database,
+        Return the products that was looked up.
+        """
         product_ids = self.cart.keys()
-        # From the id that is taken, use it to lookup the products in the database model
         product = Product.objects.filter(id__in=product_ids)
-        # Return the products that was looked up
         return product
 
     def get_quants(self):
@@ -43,12 +43,20 @@ class Cart:
         return quantities
 
     def update(self, product, quantity):
+        """
+        Gets the products in the cart
+        and update the cart qty
+        """
         product_id = str(product)
         product_qty = int(quantity)
-        # Get the cart
         mycart = self.cart
-        # Update the cart
         mycart[product_id] = product_qty
         self.session.modified = True
         balls = self.cart
         return balls
+
+    def delete(self, product):
+        product_id = str(product)
+        if product_id in self.cart:
+            del self.cart[product_id]
+        self.session.modified = True

@@ -79,6 +79,8 @@
                         <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
                         <button type="button" data-index="{{ product.id }}"
                             class="btn btn-secondary update-cart">Update</button>
+                        <button type="button" data-index="{{ product.id }}"
+                            class="btn btn-danger delete-product">Remove</button>
                     </center>
                 </div>
             </div>
@@ -106,6 +108,7 @@
 </div>
 
 <script>
+    // update the shopping cart
     $(document).on('click', '.update-cart', function (e) {
         e.preventDefault();
         var productid = $(this).data('index');
@@ -126,6 +129,25 @@
             }
         });
     })
+        // Delete products from the shopping cart
+        $(document).on('click', '.delete-product', function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'Post',
+                url: "{% url 'cart_delete' %}",
+                data: {
+                    product_id: $(this).data('index'),
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    action: 'post'
+                },
+                success: function (json) {
+                    location.reload()
+                },
+                error: function (xhr, errmsg, err) {
+    
+                }
+            });
+        })
 </script>
 
 {% endblock %}

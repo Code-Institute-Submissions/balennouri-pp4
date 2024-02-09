@@ -30,7 +30,6 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
     description = models.TextField(default="", blank=True, null=True)
     image = CloudinaryField("image", default="placeholder")
-    # Add sales product
     is_sales = models.BooleanField(default=False)
     sales_price = models.DecimalField(
         default=0, decimal_places=2, max_digits=6)
