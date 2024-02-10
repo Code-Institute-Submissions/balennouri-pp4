@@ -18,11 +18,11 @@ def password_update(request):
                 form.save()
                 messages.success(request, "Your Password Is Changed, Please")
                 login(request, user_active)
-                return redirect('user_update')
+                return redirect("user_update")
             else:
                 for error in list(form.errors.values()):
                     messages.error(request, error)
-                    return redirect('password_update')
+                    return redirect("password_update")
         else:
             form = ChangePassword(user_active)
             return render(
