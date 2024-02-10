@@ -4,11 +4,52 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .forms import SignUpForm
+from .forms import SignUpForm, UserEditProfile, ChangePassword
 from django import forms
 
 
 # Create your views here.
+def password_update(request):
+    if request.user.is_authenticated:
+        user_active = request.user
+        if request.method == "POST":
+            form = ChangePassword(user_active, request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Your Password Is Changed, Please")
+                login(request, user_active)
+                return redirect('user_update')
+            else:
+                for error in list(form.errors.values()):
+                    messages.error(request, error)
+                    return redirect('password_update')
+        else:
+            form = ChangePassword(user_active)
+            return render(
+                request,
+                "password_update.html",
+                {"form": form},
+            )
+    else:
+        messages.success(request, "You Must Be Logged in To Change Password")
+        return redirect("home")
+
+
+def user_update(request):
+    if request.user.is_authenticated:
+        active_user = User.objects.get(id=request.user.id)
+        user_form = UserEditProfile(request.POST or None, instance=active_user)
+        if user_form.is_valid():
+            user_form.save()
+            login(request, active_user)
+            messages.success(request, "Profile Has Been Updated")
+            return redirect("home")
+        return render(request, "user_update.html", {"user_form": user_form})
+    else:
+        messages.success(request, "You Must be Logged In to Update A Profile")
+        return redirect("home")
+
+
 def category(request, foo):
     foo = foo.replace("-", " ")
     try:
@@ -60,8 +101,13 @@ def login_user(request):
             messages.success(request, ("You Have Been Logged In"))
             return redirect("home")
         else:
-            messages.success(request, ("There Was An Error, \
-                Please Try Again.."))
+            messages.success(
+                request,
+                (
+                    "There Was An Error, \
+                Please Try Again.."
+                ),
+            )
             return redirect("login")
     else:
         return render(
@@ -87,8 +133,13 @@ def register_user(request):
             password = form.cleaned_data["password1"]
             user = authenticate(username=username, password=password)
             login(request, user)
-            messages.success(request, ("You Have Registered \
-                Successfully!! Welcome"))
+            messages.success(
+                request,
+                (
+                    "You Have Registered \
+                Successfully!! Welcome"
+                ),
+            )
             return redirect("home")
         else:
             messages.success(
