@@ -62,7 +62,9 @@ class SignUpForm(UserCreationForm):
         )
 
         self.fields["password2"].widget.attrs["class"] = "form-control"
-        self.fields["password2"].widget.attrs["placeholder"] = "Confirm \
+        self.fields["password2"].widget.attrs[
+            "placeholder"
+        ] = "Confirm \
             Password"
         self.fields["password2"].label = ""
         self.fields["password2"].help_text = (
