@@ -90,7 +90,7 @@
     {% endfor %}
     <center>
         <h3>Total: ${{ totals }}</h3>
-        <a href="#" class="btn btn-success">Checkout</a>
+        <a href="{% url 'checkout' %}" class="btn btn-success">Checkout</a>
     </center>
     <br>
     {% else %}
