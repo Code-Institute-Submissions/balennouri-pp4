@@ -98,7 +98,7 @@ Once you are certain that everything is ready to deploy the repo, you can do so 
 1. Log in to Heroku or create an account if necessary.
 2. Click on the button labeled "New" from the dashboard in the top right corner and select the "Create new app" option in the drop-down menu.
 3. Enter a unique name for the application and select the region you are in.
-    * For this project, the unique name is "bundu-restaurant" and the region selected is Europe.
+    * For this project, the unique name is "FastBall" and the region selected is Europe.
 4. Click on "create app".
 5. Navigate to the settings tab and click "Reveal config vars".
 6. Add the config vars necessary for the project.
@@ -114,7 +114,7 @@ NB - If you wish to rebuild the deployed app automatically every time you push t
 ### Forking the Repository
 To create a copy of the repository for viewing and editing without affecting the original repository you can fork the repository through the following steps:
 
-1. In the "bundu-restaurant" repository, click on the "fork" tab in the top right corner.
+1. In the "FastBall" repository, click on the "fork" tab in the top right corner.
 2. Click on "create fork" to fork the repository in your own GitHub account.
 
 ### Cloning The Repository
