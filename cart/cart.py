@@ -20,9 +20,8 @@ class Cart:
         if product_id in self.cart:
             pass
         else:
-            self.cart[product_id] = {"price": str(product.price)}
             self.cart[product_id] = int(product_qty)
-            self.session.modified = True
+        self.session.modified = True
 
     def cart_total(self):
         product_ids = self.cart.keys()
@@ -35,8 +34,8 @@ class Cart:
                 if product.id == key:
                     if product.is_sales:
                         total = total + (product.sales_price * value)
-                else:
-                    total = total + (product.price * value)
+                    else:
+                        total = total + (product.price * value)
         return total
 
     def __len__(self):
@@ -74,4 +73,5 @@ class Cart:
         product_id = str(product)
         if product_id in self.cart:
             del self.cart[product_id]
+
         self.session.modified = True
