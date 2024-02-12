@@ -31,10 +31,10 @@ class Cart:
         total = 0
         for key, value in quantities.items():
             key = int(key)
-        for product in products:
-            if product.id == key:
-                if product.is_sales:
-                    total = total + (product.sales_price * value)
+            for product in products:
+                if product.id == key:
+                    if product.is_sales:
+                        total = total + (product.sales_price * value)
                 else:
                     total = total + (product.price * value)
         return total

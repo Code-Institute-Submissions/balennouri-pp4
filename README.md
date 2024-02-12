@@ -27,11 +27,6 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 #### Wireframes
 
-##### Staff Reservations Page Wireframe
-![home page wireframe](documentation/readme-images/staff-reservations-wireframe.png)
-
-[Back to top](#contents)
-
 #### Database Schema
 
 ### Design Choices
@@ -40,7 +35,6 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 #### Colour Palette
 
-
 ### Project Management
 
 ## Features
@@ -48,11 +42,10 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 ### Existing Features
 
 #### The Landing page And General Site  Content
+
 * ##### The Navigation Bar
 
 * ##### The Home Page Content
-
-* ##### The Staff Dashboard
 
 * ##### The Footer
 
@@ -62,9 +55,7 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 #### Background Features
 
-
 ### Future Features
-
 
 ## Technologies Used
 * [Balsamiq](https://balsamiq.com/wireframes/)
