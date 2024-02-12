@@ -6,4 +6,4 @@ from django.contrib import messages
 
 
 def checkout_views(request):
-    return render(request, 'checkout.html')
+    return render(request, "checkout.html")
