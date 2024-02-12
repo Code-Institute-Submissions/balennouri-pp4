@@ -1,5 +1,7 @@
 # FastBall
 
+This website is a football e-commerce site. The users can find footballs of the best quality, users can also create an account and make an order from the website. Users can also categorize on the page so they can find the brand of the footballs they want.
+
 The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 ![Am I responsive screenshot]()
@@ -7,6 +9,14 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 ## Contents
 
 ## Project Goals
+
+- I wanted to create a website that allows the admin/staff to add/delete/change product and handle the user account easy on the admin panel and that is linked to a database.
+
+- I wanted to allow the admin/staff to be able to put products on sale price so they sell out the old stuff easy.
+
+- I wanted to allow the users to create an account and be able to change the their account details.
+
+- I wanted to allow users to be able to categorize on the page so they can find the brands they want easier.
 
 ## User Experience
 ### Epics
