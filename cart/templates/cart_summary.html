@@ -85,13 +85,14 @@
                 </div>
             </div>
         </div>
-    </div><br>
+    </div>
 
     {% endfor %}
-
-    <h3>Total: ${{ totals }}</h3> 
-    <br><br>
-    <a href="#" class="btn btn-success">Checkout</a>
+    <center>
+        <h3>Total: ${{ totals }}</h3>
+        <a href="#" class="btn btn-success">Checkout</a>
+    </center>
+    <br>
     {% else %}
     <br><br><br><br>
     <div class="card">
@@ -131,25 +132,25 @@
             }
         });
     })
-        // Delete products from the shopping cart
-        $(document).on('click', '.delete-product', function (e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'Post',
-                url: "{% url 'cart_delete' %}",
-                data: {
-                    product_id: $(this).data('index'),
-                    csrfmiddlewaretoken: '{{ csrf_token }}',
-                    action: 'post'
-                },
-                success: function (json) {
-                    location.reload()
-                },
-                error: function (xhr, errmsg, err) {
-    
-                }
-            });
-        })
+    // Delete products from the shopping cart
+    $(document).on('click', '.delete-product', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'Post',
+            url: "{% url 'cart_delete' %}",
+            data: {
+                product_id: $(this).data('index'),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+            },
+            success: function (json) {
+                location.reload()
+            },
+            error: function (xhr, errmsg, err) {
+
+            }
+        });
+    })
 </script>
 
 {% endblock %}
