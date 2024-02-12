@@ -58,13 +58,6 @@ class UserEditProfile(UserChangeForm):
             attrs={"class": "form-control", "placeholder": "Last Name"}
         ),
     )
-    phone = forms.CharField(
-        label="",
-        max_length=20,
-        widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Phone Number"}
-        ),
-    )
 
     class Meta:
         model = User
@@ -73,7 +66,6 @@ class UserEditProfile(UserChangeForm):
             "first_name",
             "last_name",
             "email",
-            "phone",
         )
 
     def __init__(self, *args, **kwargs):
@@ -108,13 +100,6 @@ class SignUpForm(UserCreationForm):
         max_length=100,
         widget=forms.TextInput(
             attrs={"class": "form-control", "placeholder": "Last Name"}
-        ),
-    )
-    phone = forms.CharField(
-        label="",
-        max_length=20,
-        widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Phone Number"}
         ),
     )
 
