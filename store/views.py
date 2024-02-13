@@ -3,30 +3,40 @@ from .models import Product, Category
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
 from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm
-from django import forms
 
 
-def addProduct(request):
-    form = ProductForm()
+def updateProduct(request, pk):
+    product = Product.objects.get(id=pk)
+
+    form = ProductForm(instance=product)
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             return redirect('home')
-    else:
-        form = ProductForm()
 
     context = {
         "form": form
     }
 
-    return render(request, 'addproduct.html', context)
+    return render(request, 'updateproduct.html', context)
 
 
-# Create your views here.
+def addProduct(request):
+    form = ProductForm()
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("home")
+    else:
+        form = ProductForm()
+    context = {"form": form}
+    return render(request, "addproduct.html", context)
+
+
 def password_update(request):
     if request.user.is_authenticated:
         user_active = request.user

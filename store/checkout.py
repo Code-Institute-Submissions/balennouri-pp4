@@ -1,8 +1,4 @@
-from django.shortcuts import redirect, render
-from cart.cart import Cart
-from store.models import Product
-from django.http import JsonResponse
-from django.contrib import messages
+from django.shortcuts import render
 
 
 def checkout_views(request):
