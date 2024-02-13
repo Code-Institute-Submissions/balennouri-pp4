@@ -110,7 +110,6 @@ class SignUpForm(UserCreationForm):
             "first_name",
             "last_name",
             "email",
-            "phone",
             "password1",
             "password2",
         )
