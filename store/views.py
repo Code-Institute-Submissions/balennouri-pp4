@@ -125,6 +125,10 @@ def about(request):
     )
 
 
+def checkout_views(request):
+    return render(request, "checkout.html")
+
+
 def login_user(request):
     if request.method == "POST":
         username = request.POST["username"]
