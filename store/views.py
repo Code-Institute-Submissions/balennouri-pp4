@@ -9,7 +9,7 @@ from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm
 def deleteProduct(request, pk):
     product = Product.objects.get(id=pk)
     product.delete()
-    return redirect('home')
+    return redirect("home")
 
 
 def updateProduct(request, pk):
@@ -17,17 +17,15 @@ def updateProduct(request, pk):
 
     form = ProductForm(instance=product)
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect("home")
 
-    context = {
-        "form": form
-    }
+    context = {"form": form}
 
-    return render(request, 'updateproduct.html', context)
+    return render(request, "updateproduct.html", context)
 
 
 def addProduct(request):
