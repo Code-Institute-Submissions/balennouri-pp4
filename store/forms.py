@@ -14,7 +14,6 @@ class ProductForm(forms.ModelForm):
             'category': forms.Select(attrs={'class': 'form-control'}),
             'price': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control'}),
-            'is_sales': forms.Select(attrs={'class': 'form-control'}),
             'sales_price': forms.TextInput(attrs={'class': 'forms-control'}),
         }
         labels = {
@@ -23,7 +22,7 @@ class ProductForm(forms.ModelForm):
             'category': 'Select Category',
             'price': 'Enter a price',
             'description': 'Enter a Description',
-            'is_sales': 'Is The Product On sale?',
+            'is_sales': 'Is the product on sale?',
             'sales_price': 'Enter a Sales price',
         }
 
