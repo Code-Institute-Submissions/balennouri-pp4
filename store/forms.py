@@ -1,6 +1,31 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, SetPasswordForm
 from django import forms
+from . models import Product
+
+
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = '__all__'
+        widgets = {
+            'image': forms.FileInput(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'category': forms.Select(attrs={'class': 'form-control'}),
+            'price': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control'}),
+            'is_sales': forms.Select(attrs={'class': 'form-control'}),
+            'sales_price': forms.TextInput(attrs={'class': 'forms-control'}),
+        }
+        labels = {
+            'name': 'Enter Product Name',
+            'image': 'Select an Image',
+            'category': 'Select Category',
+            'price': 'Enter a price',
+            'description': 'Enter a Description',
+            'is_sales': 'Is The Product On sale?',
+            'sales_price': 'Enter a Sales price',
+        }
 
 
 # Sign up class for registration

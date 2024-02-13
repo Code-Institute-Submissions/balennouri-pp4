@@ -4,8 +4,26 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .forms import SignUpForm, UserEditProfile, ChangePassword
+from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm
 from django import forms
+
+
+def addProduct(request):
+    form = ProductForm()
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('showProducts')
+    else:
+        form = ProductForm()
+
+    context = {
+        "form": form
+    }
+
+    return render(request, 'addproduct.html', context)
 
 
 # Create your views here.
