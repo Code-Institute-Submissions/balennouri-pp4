@@ -46,10 +46,13 @@
                                 </select>
                             </div>
                         </div>
-                        <br /><br>
+                        <br />
                         <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
-                        <button type="button" value="{{ product.id }}" class="btn btn-secondary" id="add-cart">Add To
+                        <button type="button" value="{{ product.id }}" class="btn btn-success" id="add-cart">Add To
                             Cart</button>
+                            <br><br>
+                            <a href="{% url 'updateproduct' product.id %}" class="btn btn-warning">Update Product</a>
+                            <a href="{% url 'deleteproduct' product.id %}" class="btn btn-danger">Delete Product</a>
                     </center>
                 </div>
             </div>

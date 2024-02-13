@@ -6,6 +6,12 @@ from django.contrib.auth.models import User
 from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm
 
 
+def deleteProduct(request, pk):
+    product = Product.objects.get(id=pk)
+    product.delete()
+    return redirect('home')
+
+
 def updateProduct(request, pk):
     product = Product.objects.get(id=pk)
 
