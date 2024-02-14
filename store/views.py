@@ -78,6 +78,13 @@ def password_update(request):
         return redirect("home")
 
 
+def deleteUser(request):
+    user = request.user
+    user.delete()
+    messages.success(request, "Your Account Is Deleted")
+    return redirect("register")
+
+
 def user_update(request):
     if request.user.is_authenticated:
         active_user = User.objects.get(id=request.user.id)
