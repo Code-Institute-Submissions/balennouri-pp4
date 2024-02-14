@@ -27,6 +27,48 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 #### Wireframes
 
+I used Balsamiq to create my wireframes. I decided to make wireframes for larger screens and for mobile phones. I think wireframes are a good thing to do before starting with the project, so I can put my ideas on what I want the website to look like. Some pages are a little different from the wireframes, but it small details differ from page to page. The reason is because, during development, to make a website with good functionality.
+
+##### Home page in wireframe
+
+![wireframe home page](documentation/readme/wf.home.png)
+
+##### Info page in wireframe
+
+![wireframe Info page]()
+
+##### Category page in wireframe
+
+![wireframe category page](documentation/readme/wf.category.page.png)
+
+##### Your Profile page in wireframe
+
+![wireframe update profile page](documentation/readme/wf.update.your.profile.png)
+
+##### Sign Up page in wireframe
+
+![wireframe sign up page](documentation/readme/wf.singup.png)
+
+##### Login page in wireframe
+
+![wireframe Login page](documentation/readme/wf.login.png)
+
+##### Product Management page in wireframe
+
+![wireframe product management page](documentation/readme/wf.staff.png)
+
+##### Add Product page in wireframe
+
+![wireframe add product page](documentation/readme/wf.addproduct.png)
+
+##### Update Product page in wireframe
+
+![wireframe update product page](documentation/readme/wf.updateproduct.png)
+
+##### Shopping cart page in wireframe
+
+![wireframe shopping cart page](documentation/readme/wf.shoppingcart.png)
+
 #### Database Schema
 
 ### Design Choices
@@ -34,6 +76,18 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 #### Typography
 
 #### Colour Palette
+
+![colour pallete](documentation/readme/collor.pallet.png)
+
+The color palette image was generated from [coolers.](https://coolors.co/) The colors came with the bootsrap I chose from [Start Bootstrap.](https://startbootstrap.com/)
+
+- The white color is the main color for the website.
+
+- The color of the fonts on the website is black or dark gray.
+
+- The header and footer have light dark gray colors.
+
+- All the buttons on the website are styled with bootstrap and the colors are chosen from the attribute they have.
 
 ### Project Management
 
