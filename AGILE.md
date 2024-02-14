@@ -5,7 +5,7 @@
 
 I used the project board on GitHub to split all my user stories. I used the GitHub board because it was simple and that was the way I learned through the LMS course. In the beginning, it was really difficult for me with the user stories, but after one day of it, I became more comfortable with it.
 
-For the planning for the project, I split the user stories into epics, so I could put energy and time on the right things.
+For the planning for the project, I split the user stories into diffrent labels, so I could put energy and time on the right things.
 
 ## Sprint Notes
 
@@ -45,3 +45,8 @@ My fourth sprint I was focusing on viewing the products and all the details abou
 * User Story: Cart Update
 * User Story: Cart Delete
 
+### Sprint 5 notes:
+
+My fifth sprint I was focusing on the product management for the admin/staff, allowing them to add products, update them and remove them from the store. I also started to write some content for the readme because i was tired of coding and needed to do something else to have the right focus.
+
+* User Story: Product Management
