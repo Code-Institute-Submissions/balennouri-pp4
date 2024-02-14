@@ -9,12 +9,11 @@ class Profile(models.Model):
     """
     Customer profile for admin
     """
-
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    modified_date = models.DateTimeField(User, auto_now=True)
-    phone = models.CharField(max_length=20)
-    addres1 = models.CharField(max_length=200, blank=True)
-    addres2 = models.CharField(max_length=200, blank=True)
+    date_modified = models.DateTimeField(User, auto_now=True)
+    phone = models.CharField(max_length=20, blank=True)
+    address1 = models.CharField(max_length=200, blank=True)
+    address2 = models.CharField(max_length=200, blank=True)
     city = models.CharField(max_length=200, blank=True)
     country = models.CharField(max_length=200, blank=True)
 

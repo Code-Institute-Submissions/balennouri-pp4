@@ -14,7 +14,6 @@ class ProfileInline(admin.StackedInline):
     """
     Mixes the profile info and user info
     """
-
     model = Profile
 
 
