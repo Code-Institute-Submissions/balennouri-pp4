@@ -6,10 +6,19 @@ from django.contrib.auth.models import User
 from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm
 
 
+def StaffAdmin(request):
+    products = Product.objects.all()
+    return render(
+        request,
+        "staff.html",
+        {"products": products},
+    )
+
+
 def deleteProduct(request, pk):
     product = Product.objects.get(id=pk)
     product.delete()
-    return redirect("home")
+    return redirect("staff")
 
 
 def updateProduct(request, pk):
@@ -21,7 +30,8 @@ def updateProduct(request, pk):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            return redirect("home")
+            messages.success(request, "Product Is Updated")
+            return redirect("staff")
 
     context = {"form": form}
 
@@ -34,7 +44,8 @@ def addProduct(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect("home")
+            messages.success(request, "New Product Is Added")
+            return redirect("staff")
     else:
         form = ProductForm()
     context = {"form": form}
