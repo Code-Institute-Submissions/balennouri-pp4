@@ -7,8 +7,6 @@
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Checkout</h1>
-            <p class="lead fw-normal text-white-50 mb-0 text-uppercase">This Website Is A School Project!
-            </p>
         </div>
     </div>
 </header>
@@ -23,7 +21,7 @@
         <p>3. One from our team will contact you in 30 minutes</p>
         <p>4. You will get asked how you want to make the payment for your order and where you want your package
             to get dropped off</p>
-        <br />
+            <br>
         <form method="POST" action="{% url 'checkout' %}">
             {% csrf_token %}
 
@@ -39,12 +37,15 @@
             <figcaption class="blockquote-footer">
                 <cite title="Source Title">No one will call you and ask for your details.</cite>
             </figcaption>
+            <figcaption class="blockquote-footer">
+                <cite title="Source Title">Thank You For Visiting The Page</cite>
+            </figcaption>
         </figure>
         <br /><br />
     </div>
 </div>
 </div>
 
-<br /><br /><br />
+<br /><br />
 
 {% endblock %}
