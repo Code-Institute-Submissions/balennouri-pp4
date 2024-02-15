@@ -18,6 +18,7 @@ def DeleteComments(request, pk):
     comment = Comment.objects.filter(product=pk).last()
     product_id = comment.product.id
     comment.delete()
+    messages.success(request, "Your latest comment have been deleted")
     return redirect(reverse('product', args=[product_id]))
 
 
@@ -36,9 +37,10 @@ def AddComments(request, pk):
                 date_added=datetime.now(),
             )
             sms.save()
+            messages.success(request, "Your comment have been added")
             return redirect(reverse('product', args=[pk]))
         else:
-            messages.success(request, "problem")
+            pass
     else:
         form = CommentForm()
 
