@@ -15,11 +15,11 @@ def AddComments(request, pk):
         if form.is_valid():
             name = request.user.username
             body = form.cleaned_data["commenter_body"]
-            sms = Comment(product=product, commenter_body=body, date_added=datetime.now())
+            sms = Comment(product=product, commenter_name=name, commenter_body=body, date_added=datetime.now())
             sms.save()
             return redirect("home")
         else:
-            print("Form is invalid")
+            messages.success(request, "problem")
     else:
         form = CommentForm()
 
