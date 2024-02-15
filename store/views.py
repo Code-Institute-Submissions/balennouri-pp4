@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from .models import Product, Category, Comment
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -12,6 +12,13 @@ from .forms import (
     CheckoutForms,
     CommentForm,
 )
+
+
+def DeleteComments(request, pk):
+    comment = Comment.objects.filter(product=pk).last()
+    product_id = comment.product.id
+    comment.delete()
+    return redirect(reverse('product', args=[product_id]))
 
 
 def AddComments(request, pk):
@@ -29,7 +36,7 @@ def AddComments(request, pk):
                 date_added=datetime.now(),
             )
             sms.save()
-            return redirect("home")
+            return redirect(reverse('product', args=[pk]))
         else:
             messages.success(request, "problem")
     else:

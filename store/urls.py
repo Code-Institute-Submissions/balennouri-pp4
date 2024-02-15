@@ -20,4 +20,5 @@ urlpatterns = [
     path("deleteproduct/<int:pk>", views.deleteProduct, name="deleteproduct"),
     path("staff", views.StaffAdmin, name="staff"),
     path("product/<int:pk>/add-comment", views.AddComments, name="add-comment"),
+    path("product/<int:pk>/delete-comment", views.DeleteComments, name="delete-comment"),
 ]
