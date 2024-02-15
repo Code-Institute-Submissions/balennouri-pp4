@@ -12,7 +12,39 @@
         </div>
     </div>
 </header>
+<div class="container">
+    <br><br>
+    <div class="row">
+    </div>
+    <div class="col-md-6 offset-md-3">
+        <h5>INFO: Before placing the order read this below</h5>
+        <p>1. Write your first name</p>
+        <p>2. Write your phone number</p>
+        <p>3. One from our team will contact you in 30 minutes</p>
+        <p>4. You will get asked how you want to make the payment for your order and where you want your package
+            to get dropped off</p>
+        <br />
+        <form method="POST" action="{% url 'checkout' %}">
+            {% csrf_token %}
 
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            {{ form.as_p }}
+
+            <button type="submit" class="btn btn-success">Place The Order</button>
+        </form>
+        <br>
+        <figure>
+            <blockquote class="blockquote">
+                <p>NOTE: This is a schoolproject!!</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <cite title="Source Title">No one will call you and ask for your details.</cite>
+            </figcaption>
+        </figure>
+        <br /><br />
+    </div>
+</div>
+</div>
+
+<br /><br /><br />
 
 {% endblock %}

@@ -1,7 +1,17 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, SetPasswordForm
 from django import forms
-from .models import Product
+from .models import Product, Customer
+
+
+class CheckoutForms(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = ["first_name", "phone"]
+        widgets = {
+            "first_name": forms.TextInput(attrs={"class": "form-control"}),
+            "phone": forms.TextInput(attrs={"class": "form-control"}),
+        }
 
 
 class ProductForm(forms.ModelForm):

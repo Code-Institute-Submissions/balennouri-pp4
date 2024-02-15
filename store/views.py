@@ -3,7 +3,7 @@ from .models import Product, Category
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm
+from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm, CheckoutForms
 
 
 def StaffAdmin(request):
@@ -142,7 +142,12 @@ def about(request):
 
 
 def checkout_views(request):
-    return render(request, "checkout.html")
+    form = CheckoutForms()
+    if request.method == "POST":
+        messages.success(request, "Thank you for your request, We will contact\
+             you in 30 minutes")
+        return redirect("home")
+    return render(request, "checkout.html", {"form": form})
 
 
 def login_user(request):
