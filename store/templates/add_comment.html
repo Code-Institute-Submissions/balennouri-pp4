@@ -16,12 +16,13 @@
             <br /><br />
             <form method="POST" action="">
                 {% csrf_token %}
+                <h3>Add Comments</h3>
+                <br>
 
                 {{ form.as_p }}
 
                 <br />
-                <button type="submit" class="btn btn-success">Update Product</button>
-                <button type="submit" class="btn btn-danger">Delete Product</button>
+                <button type="submit" class="btn btn-success">Add Comment</button>
             </form>
             <br /><br />
             <br /><br />
@@ -29,6 +30,6 @@
         </div>
     </div>
 </div>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br />
 
 {% endblock %}

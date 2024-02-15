@@ -3,13 +3,27 @@ from .models import Product, Category, Comment
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
+from datetime import datetime
 from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm, CheckoutForms, CommentForm
 
 
 def AddComments(request, pk):
     product = Product.objects.get(id=pk)
-    form = CommentForm()
-    return render(request, 'add_comments.html', {"form": form})
+    form = CommentForm(instance=product)
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=product)
+        if form.is_valid():
+            name = request.user.username
+            body = form.cleaned_data["commenter_body"]
+            sms = Comment(product=product, commenter_body=body, date_added=datetime.now())
+            sms.save()
+            return redirect("home")
+        else:
+            print("Form is invalid")
+    else:
+        form = CommentForm()
+
+    return render(request, 'add_comment.html', {"form": form})
 
 
 def StaffAdmin(request):
