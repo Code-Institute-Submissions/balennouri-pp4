@@ -1,7 +1,10 @@
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, SetPasswordForm
 from django import forms
 from .models import Product, Customer, Comment
+from django.contrib.auth.forms import (
+    UserCreationForm,
+    UserChangeForm,
+    SetPasswordForm)
 
 
 class CommentForm(forms.ModelForm):
