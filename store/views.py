@@ -4,7 +4,14 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 from datetime import datetime
-from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm, CheckoutForms, CommentForm
+from .forms import (
+    SignUpForm,
+    UserEditProfile,
+    ChangePassword,
+    ProductForm,
+    CheckoutForms,
+    CommentForm,
+)
 
 
 def AddComments(request, pk):
@@ -15,7 +22,12 @@ def AddComments(request, pk):
         if form.is_valid():
             name = request.user.username
             body = form.cleaned_data["commenter_body"]
-            sms = Comment(product=product, commenter_name=name, commenter_body=body, date_added=datetime.now())
+            sms = Comment(
+                product=product,
+                commenter_name=name,
+                commenter_body=body,
+                date_added=datetime.now(),
+            )
             sms.save()
             return redirect("home")
         else:
@@ -23,7 +35,7 @@ def AddComments(request, pk):
     else:
         form = CommentForm()
 
-    return render(request, 'add_comment.html', {"form": form})
+    return render(request, "add_comment.html", {"form": form})
 
 
 def StaffAdmin(request):
@@ -164,8 +176,11 @@ def about(request):
 def checkout_views(request):
     form = CheckoutForms()
     if request.method == "POST":
-        messages.success(request, "Thank you for your request, We will contact\
-             you in 30 minutes")
+        messages.success(
+            request,
+            "Thank you for your request, We will contact\
+             you in 30 minutes",
+        )
         return redirect("home")
     return render(request, "checkout.html", {"form": form})
 

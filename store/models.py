@@ -29,8 +29,7 @@ class Product(models.Model):
     description = models.TextField(default="", blank=True, null=True)
     image = CloudinaryField("image", default="placeholder")
     is_sales = models.BooleanField(default=False)
-    sales_price = models.DecimalField(
-        default=0, decimal_places=2, max_digits=6)
+    sales_price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
 
     def __str__(self):
         return self.name
@@ -51,10 +50,11 @@ class Order(models.Model):
 
 class Comment(models.Model):
     product = models.ForeignKey(
-        Product, related_name="comments", on_delete=models.CASCADE)
+        Product, related_name="comments", on_delete=models.CASCADE
+    )
     commenter_name = models.CharField(max_length=200)
     commenter_body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '%s - %s' % (self.product.name, self.commenter_name)
+        return "%s - %s" % (self.product.name, self.commenter_name)
