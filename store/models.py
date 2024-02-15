@@ -1,7 +1,6 @@
 from django.db import models
 import datetime
 from cloudinary.models import CloudinaryField
-from django.contrib.auth.models import User
 
 
 class Category(models.Model):

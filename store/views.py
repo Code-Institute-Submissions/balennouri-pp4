@@ -149,11 +149,12 @@ def category(request, foo):
 
 def product(request, pk):
     product = Product.objects.get(id=pk)
-    return render(
-        request,
-        "product.html",
-        {"product": product},
-    )
+    comment_num = Comment.objects.filter(product=product).count()
+    context = {
+        "product": product,
+        "comment_num": comment_num
+    }
+    return render(request, "product.html", context)
 
 
 def home(request):
