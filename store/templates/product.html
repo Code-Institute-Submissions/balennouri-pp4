@@ -55,6 +55,29 @@
             </div>
         </div>
     </div>
+    Add Comments ()
+    <br>
+    <hr>
+
+    {% if not product.comments.all %}
+
+    <p>No comments added yet...</p>
+    <p><a class="btn btn-primary" href="#"> Add Comment </a></p>
+
+    {% else %}
+
+    {% for comment in product.comments.all %}
+
+    <h5><strong>{{ comment.commenter_name }}</strong></h5>
+    <p>{{ comment.commenter_body }}</p>
+    <p><small>{{ comment.date_added }}</small></p>
+
+    {% endfor %}
+
+    {% endif %}
+
+    <p><a class="btn btn-primary" href="#"> Add Comment </a></p>
+    <p><a class="btn btn-danger" href="#"> Delete Comment </a></p>
 </div>
 
 <script>

@@ -1,9 +1,15 @@
 from django.shortcuts import render, redirect
-from .models import Product, Category
+from .models import Product, Category, Comment
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm, CheckoutForms
+from .forms import SignUpForm, UserEditProfile, ChangePassword, ProductForm, CheckoutForms, CommentForm
+
+
+def AddComments(request, pk):
+    product = Product.objects.get(id=pk)
+    form = CommentForm()
+    return render(request, 'add_comments.html', {"form": form})
 
 
 def StaffAdmin(request):
