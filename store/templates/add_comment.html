@@ -13,7 +13,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <br /><br />
+            <br />
+            {% if user.is_authenticated %}
+
             <form method="POST" action="">
                 {% csrf_token %}
                 <h3>Add Comments</h3>
@@ -21,15 +23,27 @@
 
                 {{ form.as_p }}
 
+
+
                 <br />
                 <button type="submit" class="btn btn-success">Add Comment</button>
+
+                {% else %}
+
+                <br>
+                <center>
+                    <p>Sign up or Login to Comment</p>
+                    <a href="{% url 'register' %}" class="btn btn-success">Sign Up</a>
+                    <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                </center>
+
+
+                {% endif %}
+
             </form>
-            <br /><br />
-            <br /><br />
-            <br /><br />
         </div>
     </div>
 </div>
-<br /><br />
+<br>
 
 {% endblock %}
