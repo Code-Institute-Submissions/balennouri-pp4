@@ -59,6 +59,7 @@ def StaffAdmin(request):
 def deleteProduct(request, pk):
     product = Product.objects.get(id=pk)
     product.delete()
+    messages.success(request, "Product Is Deleted")
     return redirect("staff")
 
 
