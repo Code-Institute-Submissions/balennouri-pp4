@@ -105,8 +105,6 @@ The color palette image was generated from [coolers.](https://coolors.co/) The c
 
 * ##### The Footer
 
-#### User Permissions
-
 #### User Accounts
 
 #### Background Features
@@ -205,6 +203,17 @@ To set up a database, follow these steps:
 [Cloudinary](https://cloudinary.com/) is used in this project to store media assets. This is done due to the fact that Heroku does not store media files reliably.
 
 ## Credits
+
+To style the page and the content to Read me:
+
+- The screenshot at the top of the ReadMe was built from [Ami Responsive.](https://ui.dev/amiresponsive)
+
+To write the code for this project:
+
+- [Code institute LMS](https://learn.codeinstitute.net/dashboard)
+- [W3Schools](https://www.w3schools.com/)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- [Coding 4 You](http://www.coding4you.at/inf_tag/beginners_python_cheat_sheet.pdf)
 
 ## Acknowledgements
 
