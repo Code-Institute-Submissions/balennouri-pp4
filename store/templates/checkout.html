@@ -21,7 +21,17 @@
         <p>3. One from our team will contact you in 30 minutes</p>
         <p>4. You will get asked how you want to make the payment for your order and where you want your package
             to get dropped off</p>
-            <br>
+            <figure>
+                <blockquote class="blockquote">
+                    <p>NOTE: This is a school project!!</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    <cite>Nobody will call you and ask for your details, This is just for school</cite>
+                </figcaption>
+                <figcaption class="blockquote-footer">
+                    <cite>Thank You For Visiting The Page</cite>
+                </figcaption>
+            </figure>
         <form method="POST" action="{% url 'checkout' %}">
             {% csrf_token %}
 
@@ -29,18 +39,6 @@
 
             <button type="submit" class="btn btn-success">Place The Order</button>
         </form>
-        <br>
-        <figure>
-            <blockquote class="blockquote">
-                <p>NOTE: This is a school project!!</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                <cite>Nobody will call you and ask for your details, This is just for school</cite>
-            </figcaption>
-            <figcaption class="blockquote-footer">
-                <cite>Thank You For Visiting The Page</cite>
-            </figcaption>
-        </figure>
         <br /><br />
     </div>
 </div>
