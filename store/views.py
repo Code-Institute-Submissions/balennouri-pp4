@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib.auth.decorators import user_passes_test
 from .models import Product, Category, Comment
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -47,6 +48,7 @@ def AddComments(request, pk):
     return render(request, "add_comment.html", {"form": form})
 
 
+@user_passes_test(lambda u: u.is_staff, login_url='home')
 def StaffAdmin(request):
     products = Product.objects.all()
     return render(
@@ -56,6 +58,7 @@ def StaffAdmin(request):
     )
 
 
+@user_passes_test(lambda u: u.is_staff, login_url='home')
 def deleteProduct(request, pk):
     product = Product.objects.get(id=pk)
     product.delete()
@@ -63,6 +66,7 @@ def deleteProduct(request, pk):
     return redirect("staff")
 
 
+@user_passes_test(lambda u: u.is_staff, login_url='home')
 def updateProduct(request, pk):
     product = Product.objects.get(id=pk)
 
@@ -80,6 +84,7 @@ def updateProduct(request, pk):
     return render(request, "updateproduct.html", context)
 
 
+@user_passes_test(lambda u: u.is_staff, login_url='home')
 def addProduct(request):
     form = ProductForm()
     if request.method == "POST":
