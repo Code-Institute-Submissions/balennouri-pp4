@@ -7,6 +7,8 @@ I used the project board on GitHub to split all my user stories. I used the GitH
 
 For the planning for the project, I split the user stories into diffrent labels, so I could put energy and time on the right things.
 
+Because of the good time I had on this project, I chose to add all of my user stories to one milestone and put that milestone date on 2024-02-25. I focused on finishing the issues on that day. I also realized that it is really challenging to be a one-person agile team.
+
 ## Sprint Notes
 
 Below is a summary of learnings from each iteration.
@@ -39,8 +41,11 @@ My third sprint I was focusing on allow the users to make an account on the webs
 
 ### Sprint 4 notes:
 
-My fourth sprint I was focusing on viewing the products and all the details about them. Allow the user to add/remove product in to the cart and be able to update the quantities of the product. 
+In the fourth sprint, I put my focus on getting my bootstrap theme I had chosen taken from start bootstrap. I added the bootstrap and linked the css file that was coming with the theme. Then I focused on getting the all the product and the info for the products to the home page so the users can see them and so on. So, in this sprint I focused on getting the templates right and the bootstrap. I had a good tempo and could also start with the shopping cart and add the functions for that also. 
 
+* Template: Navbar
+* Template: Home Page
+* Template: Footer
 * User Story: Products
 * User Story: Cart Update
 * User Story: Cart Delete
@@ -50,3 +55,8 @@ My fourth sprint I was focusing on viewing the products and all the details abou
 My fifth sprint I was focusing on the product management for the admin/staff, allowing them to add products, update them and remove them from the store. I also started to write some content for the readme because i was tired of coding and needed to do something else to have the right focus.
 
 * User Story: Product Management
+* EPIC: Make Order
+* Read Me: Deployment And Development
+* Read Me: Intro
+* Read Me: Technology Used
+* Read Me: Design Choiceso

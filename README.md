@@ -12,6 +12,8 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 - I wanted to create a website that allows the admin/staff to add/delete/change product and handle the user account easy on the admin panel and that is linked to a database.
 
+- I wanted to allow the admin/staff to see an admin link on the navbar when they are logged in, where they can add, update and delete products.
+
 - I wanted to allow the admin/staff to be able to put products on sale price so they sell out the old stuff easy.
 
 - I wanted to allow the users to create an account and be able to change the their account details.
@@ -205,3 +207,5 @@ To set up a database, follow these steps:
 ## Credits
 
 ## Acknowledgements
+
+This site was developed as my Fourth portfolio project for the Code Institute course in Full Stack Software Development. I would like to thank my mentor David Bowers, the slack community and the Code Institute team.
