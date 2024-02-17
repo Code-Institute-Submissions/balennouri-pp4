@@ -30,7 +30,7 @@ During the planning for the project, I started and created 3 epics and then brok
 
 The user stories that were broken down from the epics, I labeled them with different labels and I used the MoSCoW (must have, should have, could have and won't have) to develop them. I labeled them, so I could put energy on the important ones before I started with the non-important ones. You can se all of them on the project board [here.](https://github.com/users/balennouri/projects/5/views1)
 
-The epics can see below here:
+Below here is the completed user stories for this version of this project listed by epics:
 
 ##### Epic 1 User Authentication and Account Management:
 
