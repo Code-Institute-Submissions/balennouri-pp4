@@ -21,9 +21,50 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 - I wanted to allow users to be able to categorize on the page so they can find the brands they want easier.
 
 ## User Experience
-### Epics
 
 ### User Stories
+
+#### Epics 
+
+During the planning for the project, I started and created 3 epics and then broke them down into 32 user stories.
+
+The user stories that were broken down from the epics, I labeled them with different labels and I used the MoSCoW (must have, should have, could have and won't have) to develop them. I labeled them, so I could put energy on the important ones before I started with the non-important ones. You can se all of them on the project board [here.](https://github.com/users/balennouri/projects/5/views1)
+
+The epics can see below here:
+
+##### Epic 1 User Authentication and Account Management:
+
+* As a first time user, I can create an account so that I can place an order and comment on products.
+
+* As a user I can delete my account.
+
+* As a returning user I can login/logout of my account.
+
+* As returning user I can update my profile information.
+
+* As site owner I can see all the detail information for the users in the admin panel.
+
+##### Epic 2 Product Management and Cart/Checkout:
+
+* As a admin I can add/delete/update products on the admin panel and on the website.
+
+* As a admin I can add new categories on the admin panel.
+
+* As a user I can add products to the cart.
+
+* As a user I can update the quantity of the product in the cart and delete the product from the cart.
+
+* As user I can place an order and checkout.
+
+* When a user or admin place a order the cart becomes empty.
+
+##### Epic 3 The Webiste and Content:
+
+* As a user I will have it easy to navigate on the page.
+
+* As a user I will be able to see the rules and info for the store.
+
+* As a user I will be able to categorize the brand of the balls.
 
 ### Site Structure
 

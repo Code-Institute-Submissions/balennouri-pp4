@@ -27,17 +27,17 @@ On the first sprint I didn't set any time limit because I started at good time w
 
 ### Sprint 2 notes:
 
-My second sprint I was focusing on getting the admin/staff area covered. These user stories were epics and were the most haves for the website.
+My second sprint I was focusing on getting the admin/staff area covered.
 
-* EPIC: Manage Store Products
-* EPIC: Manage Customer Accounts
+* User Story: Manage Store Products
+* User Story: Manage Customer Accounts
 
 ### Sprint 3 notes:
 
-My third sprint I was focusing on allow the users to make an account on the website. These were epics user stories.
+My third sprint I was focusing on allow the users to make an account on the website.
 
-* EPIC: Account Registration
-* EPIC: User Login
+* User Story: Account Registration
+* User Story: User Login
 
 ### Sprint 4 notes:
 
@@ -55,7 +55,7 @@ In the fourth sprint, I put my focus on getting my bootstrap theme I had chosen 
 My fifth sprint I was focusing on the product management for the admin/staff, allowing them to add products, update them and remove them from the store. I also started to write some content for the readme because i was tired of coding and needed to do something else to have the right focus.
 
 * User Story: Product Management
-* EPIC: Make Order
+* User Story: Make Order
 * Read Me: Deployment And Development
 * Read Me: Intro
 * Read Me: Technology Used
