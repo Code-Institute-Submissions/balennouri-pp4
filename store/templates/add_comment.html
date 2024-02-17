@@ -18,7 +18,7 @@
 
             <form method="POST" action="">
                 {% csrf_token %}
-                <h3>Add Comments</h3>
+                <h2 class="fw-bolder h3">Add Comments</h2>
                 <br>
 
                 {{ form.as_p }}
@@ -32,7 +32,7 @@
 
                 <br>
                 <center>
-                    <p>Sign up or Login to Comment</p>
+                    <p class="fw-bolder">Sign up or Login to Comment</p>
                     <a href="{% url 'register' %}" class="btn btn-success">Sign Up</a>
                     <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
                 </center>
