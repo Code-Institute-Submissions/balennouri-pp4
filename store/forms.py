@@ -19,9 +19,8 @@ class CommentForm(forms.ModelForm):
 class CheckoutForms(forms.ModelForm):
     class Meta:
         model = Customer
-        fields = ["first_name", "phone"]
+        fields = ["phone"]
         widgets = {
-            "first_name": forms.TextInput(attrs={"class": "form-control"}),
             "phone": forms.TextInput(attrs={"class": "form-control"}),
         }
 

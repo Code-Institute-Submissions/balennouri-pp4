@@ -15,23 +15,23 @@
     <div class="row">
     </div>
     <div class="col-md-6 offset-md-3">
+        {% if user.is_authenticated %}
         <h5>INFO: Before placing the order read this below</h5>
-        <p>1. Write your first name</p>
-        <p>2. Write your phone number</p>
-        <p>3. One from our team will contact you in 30 minutes</p>
-        <p>4. You will get asked how you want to make the payment for your order and where you want your package
+        <p>1. Write your phone number</p>
+        <p>2. One from our team will contact you in 30 minutes</p>
+        <p>3. You will get asked how you want to make the payment for your order and where you want your package
             to get dropped off</p>
-            <figure>
-                <blockquote class="blockquote">
-                    <p>NOTE: This is a school project!!</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                    <cite>Nobody will call you and ask for your details, This is just for school</cite>
-                </figcaption>
-                <figcaption class="blockquote-footer">
-                    <cite>Thank You For Visiting The Page</cite>
-                </figcaption>
-            </figure>
+        <figure>
+            <blockquote class="blockquote">
+                <p>NOTE: This is a school project!!</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <cite>Nobody will call you and ask for your details, This is just for school</cite>
+            </figcaption>
+            <figcaption class="blockquote-footer">
+                <cite>Thank You For Visiting The Page</cite>
+            </figcaption>
+        </figure>
         <form method="POST" action="{% url 'checkout' %}">
             {% csrf_token %}
 
@@ -39,6 +39,17 @@
 
             <button type="submit" class="btn btn-success">Place The Order</button>
         </form>
+
+        {% else %}
+
+        <center>
+            <p>You must be logged in to place a order, Please sign up or login</p>
+            <a href="{% url 'register' %}" class="btn btn-success">Sign Up</a>
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        </center>
+
+        {% endif %}
+
         <br /><br />
     </div>
 </div>
