@@ -184,7 +184,7 @@ Admin/Staff: Product Management
 
 ![add product](documentation/readme-features/add-product.png)
 
-Messages:
+Messages staff users see when they do something on the product management page:
 
 ![Add product mess](documentation/readme-features/mess-add-prod.png)
 
@@ -204,11 +204,39 @@ Category page:
 
 ![Category page](documentation/readme-features/category-page.png)
 
-Profile page:
+Account pages:
+
+![login page](documentation/readme-features/login.png)
+
+![signup page](documentation/readme-features/signup.png)
 
 ![profile page](documentation/readme-features/your-profile-page.png)
 
 ![password page](documentation/readme-features/password-update.png)
+
+Messages users see if they do some changes for their account:
+
+![account messages](documentation/readme-features/mess-loggedin.png)
+
+![account messages](documentation/readme-features/mess-logged-out.png)
+
+![account messages](documentation/readme-features/mess-password-change.png)
+
+![account messages](documentation/readme-features/mess-profile-updated.png)
+
+![account messages](documentation/readme-features/mess-account-delete.png)
+
+Cart page:
+
+
+
+Messages users see when they add/delete or update something in the cart:
+
+![cart messages](documentation/readme-features/mess-cart-add.png)
+
+![cart messages](documentation/readme-features/mess-cart-update.png)
+
+![cart messages](documentation/readme-features/mess-cart-remove.png)
 
 * ##### The Footer
 
