@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import user_passes_test
 from .models import Product, Category, Comment
-from cart.cart import Cart
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User

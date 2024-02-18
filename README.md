@@ -244,6 +244,14 @@ Messages users see when they add/delete or update something in the cart:
 
 ![cart messages](documentation/readme-features/mess-cart-remove.png)
 
+Checkout page:
+
+![Checkout page](documentation/readme-features/)
+
+Message user see when they place order:
+
+![Checkout message](documentation/readme-features/mess-checkout.png)
+
 * ##### The Footer
 
 #### User Accounts
