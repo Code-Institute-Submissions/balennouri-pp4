@@ -136,6 +136,8 @@ The Database schema:
 
 #### Typography
 
+The fonts used for this project came with the start bootsrap theme, and are the roboto, Helvetica Neue and sans-serif as a secondary font.
+
 #### Colour Palette
 
 ![colour pallete](documentation/readme/collor.pallet.png)
@@ -152,6 +154,8 @@ The color palette image was generated from [coolers.](https://coolors.co/) The c
 
 ### Project Management
 
+I used agile methodology throughout the development of this project utilizing GitHub projects and issues. You can read more about this in the AGILE.md file [here.](https://github.com/balennouri/pp4/blob/main/AGILE.md)
+
 ## Features
 
 ### Existing Features
@@ -160,7 +164,49 @@ The color palette image was generated from [coolers.](https://coolors.co/) The c
 
 * ##### The Navigation Bar
 
-* ##### The Home Page Content
+The site navbar when user comes in to the page:
+
+![navbar](documentation/readme-features/navbar-ingen.png)
+
+The site navbar when user is logged in:
+
+![navbar](documentation/readme-features/navbar-user.png)
+
+The site navbar when admin is logged in:
+
+![navbar](documentation/readme-features/navbar-admin.png)
+
+* ##### The Main Content
+
+Admin/Staff: Product Management
+
+![product management](documentation/readme-features/product-management.png)
+
+![add product](documentation/readme-features/add-product.png)
+
+Messages:
+
+![Add product mess](documentation/readme-features/mess-add-prod.png)
+
+![Delete product mess](documentation/readme-features/mess-delete-prod.png)
+
+![Update product mess](documentation/readme-features/mess-update-prod.png)
+
+Home page:
+
+![home page](documentation/readme-features/home-page.png)
+
+Info page:
+
+![info page](documentation/)
+
+Category page:
+
+![Category page](documentation/readme-features/category-page.png)
+
+Profile page:
+
+![profile page](documentation/readme-features/your-profile-page.png)
 
 * ##### The Footer
 
