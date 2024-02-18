@@ -107,7 +107,7 @@ def password_update(request):
             form = ChangePassword(user_active, request.POST)
             if form.is_valid():
                 form.save()
-                messages.success(request, "Your Password Is Changed, Please")
+                messages.success(request, "Your Password Is Changed")
                 login(request, user_active)
                 return redirect("user_update")
             else:

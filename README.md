@@ -208,6 +208,8 @@ Profile page:
 
 ![profile page](documentation/readme-features/your-profile-page.png)
 
+![password page](documentation/readme-features/password-update.png)
+
 * ##### The Footer
 
 #### User Accounts
