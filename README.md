@@ -26,13 +26,21 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 #### Epics 
 
-During the planning for the project, I started and created 3 epics and then broke them down into 32 user stories.
+During the planning for the project, I started and created 4 epics and then broke them down into 38 user stories.
 
-The user stories that were broken down from the epics, I labeled them with different labels and I used the MoSCoW (must have, should have, could have and won't have) to develop them. I labeled them, so I could put energy on the important ones before I started with the non-important ones. You can se all of them on the project board [here.](https://github.com/users/balennouri/projects/5/views1)
+The user stories that were broken down from the epics, I labeled them with different labels and I used the MoSCoW (must have, should have, could have and won't have) to develop them. I labeled them, so I could put energy on the important ones before I started with the non-important ones. You can se all of them on the project board [here.](https://github.com/users/balennouri/projects/5/views1) On the project board you will be able to see the future features as well.
 
 Below here is the completed user stories for this version of this project listed by epics:
 
-##### Epic 1 User Authentication and Account Management:
+##### Epic: Initial Django Setup
+
+* As a developer I want to set up Django and install the initial supporting libraries needed so that I can begin development of the site.
+
+* As a developer I want to set up the environment to secure secret configuration variables so that I can ensure sensitive data is kept private.
+
+* As a developer I want to deploy the site to Heroku so that I can ensure the site works in a production environment and share the completed site publicly.
+
+##### Epic: User Authentication and Account Management
 
 * As a first time user, I can create an account so that I can place an order and comment on products.
 
@@ -44,7 +52,7 @@ Below here is the completed user stories for this version of this project listed
 
 * As site owner I can see all the detail information for the users in the admin panel.
 
-##### Epic 2 Product Management and Cart/Checkout:
+##### Epic: Product Management and Cart/Checkout
 
 * As a admin I can add/delete/update products on the admin panel and on the website.
 
@@ -58,7 +66,7 @@ Below here is the completed user stories for this version of this project listed
 
 * When a user or admin place a order the cart becomes empty.
 
-##### Epic 3 The Webiste and Content:
+##### Epic: The Webiste and Content:
 
 * As a user I will have it easy to navigate on the page.
 
@@ -113,6 +121,16 @@ I used Balsamiq to create my wireframes. I decided to make wireframes for larger
 ![wireframe shopping cart page](documentation/readme/wf.shoppingcart.png)
 
 #### Database Schema
+
+For this project, I utilized the built-in Django User Model for user accounts and created one model in the store app. In the store model, I built a customer model, order model, product model and category model.
+
+The database schema seen below was created using [Drawsql.app.](https://drawsql.app/) All the fields are not labeled correctly because of limitations in the "drawsql" app. One are the email field and the cloudinary field. However, the diagram still shows the general layout of the models in the store app.
+
+If you want to see the true field choices, head over to the models.py in the store app.
+
+The Database schema:
+
+![Database schema](documentation/readme/database.schema.png)
 
 ### Design Choices
 
