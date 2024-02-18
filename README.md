@@ -86,7 +86,7 @@ I used Balsamiq to create my wireframes. I decided to make wireframes for larger
 
 ##### Info page in wireframe
 
-![wireframe Info page]()
+![wireframe Info page](documentation/readme/wf-info.png)
 
 ##### Category page in wireframe
 
