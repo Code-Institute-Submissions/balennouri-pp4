@@ -4,7 +4,7 @@ This website is a football e-commerce site. The users can find footballs of the 
 
 The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
-![Am I responsive screenshot]()
+![Am I responsive screenshot](documentation/readme/ami.responsive.png)
 
 ## Contents
 
