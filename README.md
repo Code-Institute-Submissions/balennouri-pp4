@@ -246,13 +246,27 @@ Messages users see when they add/delete or update something in the cart:
 
 Checkout page:
 
-![Checkout page](documentation/readme-features/)
+![Checkout page](documentation/readme-features/checkout.png)
+
+![Checkout page](documentation/readme-features/checkout-not.png)
 
 Message user see when they place order:
 
 ![Checkout message](documentation/readme-features/mess-checkout.png)
 
+Comment page:
+
+![comment page](documentation/readme-features/comment-page-not.png)
+
+![comment page](documentation/readme-features/comment-page.png)
+
+Message user see when they comment:
+
+![comment message](documentation/readme-features/mess-comment.png)
+
 * ##### The Footer
+
+![footer](documentation/readme-features/footer.png)
 
 #### User Accounts
 
