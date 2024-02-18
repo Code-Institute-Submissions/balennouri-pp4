@@ -196,8 +196,7 @@ def checkout_views(request):
         del request.session['session_key']
         messages.success(
             request,
-            "Thank you for your request, We will contact\
-             you in 30 minutes",
+            "Thank you for your request, We will contact you!"
         )
         return redirect("home")
     return render(request, "checkout.html", {"form": form})
