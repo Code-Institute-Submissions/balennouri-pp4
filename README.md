@@ -202,7 +202,7 @@ View Product page:
 
 Info page:
 
-![info page](documentation/)
+![info page](documentation/readme-features/info.png)
 
 Category page:
 
