@@ -232,6 +232,10 @@ Messages users see if they do some changes for their account:
 
 Cart page:
 
+![cart page](documentation/readme-features/cart-product.png)
+
+![cart page](documentation/readme-features/cart-empty.png)
+
 Messages users see when they add/delete or update something in the cart:
 
 ![cart messages](documentation/readme-features/mess-cart-add.png)
