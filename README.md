@@ -196,6 +196,10 @@ Home page:
 
 ![home page](documentation/readme-features/home-page.png)
 
+View Product page:
+
+![product page](documentation/readme-features/product.png)
+
 Info page:
 
 ![info page](documentation/)
@@ -227,8 +231,6 @@ Messages users see if they do some changes for their account:
 ![account messages](documentation/readme-features/mess-account-delete.png)
 
 Cart page:
-
-
 
 Messages users see when they add/delete or update something in the cart:
 
