@@ -459,39 +459,49 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 
 ### Test Case #1: Navbar Functionality
 
-| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+| Test Step # | Test Description | Action / Input | Expected Result | Result |
 |-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
-| 1           | Click navbar links                       | Click on each of the navbar link          | Navigate to respective pages            | Pass    |
-| 2           | Verify navigation                        | Verify each click navigation        | Navigate to respective pages           | Pass    |
-| 3           | Test "Sign Up" button                    | Click on "Sign Up"                  | Redirect to sign-up page                | Pass    |
-| 4           | Test "Sign In" button                    | Click on "Login"                  | Redirect to sign-in page                | Pass    |
-| 5           | Test categories dropdown menu               | Click on categories dropdown menu      | Ensure options work as expected         | Pass    |
+| 1 | Click navbar links | Click on each of the navbar link          | Navigate to respective pages | Pass |
+| 2 | Verify navigation | Verify each click navigation | Navigate to respective pages | Pass |
+| 3 | Test "Sign Up" button | Click on "Sign Up" | Redirect to sign-up page | Pass |
+| 4 | Test "Sign In" button | Click on "Login" | Redirect to sign-in page | Pass |
+| 5 | Test categories dropdown menu | Click on categories dropdown menu | Ensure options work as expected | Pass |
 
 ### Test Case #2: Sign Up Functionality
 
-| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+| Test Step # | Test Description | Action / Input | Expected Result | Result |
 |-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
-| 1           | Fill out sign-up form                    | Enter valid user information       | Form submitted without errors           | Pass    |
-| 2           | Submit form                              | Click submit button                 | Account created successfully            | Pass    |
-| 3           | Attempt sign-in                          | Sign in with new account           | Sign-in successful, redirected to home page | Pass    |
+| 1 | Fill out sign-up form | Enter valid user information | Form submitted without errors | Pass |
+| 2 | Submit form | Click submit button | Account created successfully | Pass |
+| 3 | Attempt sign-in | Sign in with new account | Sign-in successful, redirected to home page | Pass |
 
 ### Test Case #3: Sign In Functionality
 
-| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+| Test Step # | Test Description | Action / Input | Expected Result | Result  |
 |-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
-| 1           | Navigate to sign-in page                 | Click on "Sign In"                  | Sign-in page displayed                 | Pass    |
-| 2           | Enter valid login                  | Enter username and password           | Sign-in form submitted without errors   | Pass    |
-| 3           | Submit form                              | Click submit button                 | Sign-in successful, redirected to home page | Pass    |
-| 4           | Test sign-in with invalid login   | Enter incorrect username/password    | Get a message that the username or password is incorrect     | Pass    |
+| 1 | Navigate to sign-in page | Click on "Sign In" | Sign-in page displayed | Pass |
+| 2 | Enter valid login | Enter username and password | Sign-in form submitted without errors | Pass |
+| 3 | Submit form | Click submit button | Sign-in successful, redirected to home page | Pass |
+| 4 | Test sign-in with invalid login   | Enter incorrect username/password | Get a message that the username or password is incorrect | Pass |
 
 ### Test Case #4: Checkout Functionality
 
-| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+| Test Step # | Test Description | Action / Input | Expected Result | Result |
 |-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
-| 1           | Navigate to cart page          | Click on checkout               | checkout page is displayed | Pass    |
-| 2           | If cart is empty verify that back to store button works                       | Click on back to store        | Redirect to home page             | Pass    |
-| 3           | Ensure that the 2 button links work, when user try to checkout but are not logged in                 | Click on Login/Sign up | Redirect to Login/Sign up | Pass    |
-| 4           | Submit the checkout form and ensure that no errore come up.          | Click on place order         | redirect to home page and get the message | Pass    |
+| 1 | Navigate to cart page | Click on checkout | checkout page is displayed | Pass |
+| 2 | If cart is empty verify that back to store button works | Click on back to store | Redirect to home page | Pass |
+| 3 | Ensure that the 2 button links work, when user try to checkout but are not logged in | Click on Login/Sign up | Redirect to Login/Sign up | Pass |
+| 4 | Submit the checkout form and ensure that no errore come up. | Click on place order | redirect to home page and get the message | Pass |
+
+### Test Case #5: Product Management Functionality
+
+| Test Step # | Test Description                                  | Action / Input                      | Expected Result                                       | Result  |
+|-------------|--------------------------------------------------|-------------------------------------|--------------------------------------------------------|---------|
+| 1 | Navigate to the add product/all product page on the admin link | Click on add product and all products | redirect to all product or add product page | Pass    |
+| 2 | Update one of the products | Change all the product details | The products details is changed on all pages | Pass    |
+| 3 | Add new product | click on on add product  | Product is added on all pages | Pass    |
+| 4 | Delete one of the products | Click on delete product | Product is deleted on all pages | Pass    |
+| 5 | Look if ElphantSQL database is updated | Product is added or deleted in the database | The products on the EplhantSQL database is deleted or added in the database | Pass    |
 
 
 
