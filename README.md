@@ -22,12 +22,17 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 * [Features](#features)
     * [Existing Features](#existing-features)
         * [All The Pages](#all-the-pages)
-        * []()
-        * []()
-        * []()
-        * []()
-        * []()
-        * []()
+        * [The Navigation Bar](#the-navigation-bar)
+        * [The Main Content](#the-main-content)
+            * [Admin/Staff](#adminstaff-product-management)
+            * [Home Page](#home-page)
+            * [Info Page](#info-page)
+            * [Category Page](#category-page)
+            * [Account Pages](#account-pages)
+            * [Cart Page](#cart-page)
+            * [Checkout Page](#checkout-page)
+            * [Comment Page](#comment-page)
+        * [The Footer](#the-footer)
     * [Future Features](#future-features)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
@@ -51,6 +56,8 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 - I wanted to allow the users to create an account and be able to change the their account details.
 
 - I wanted to allow users to be able to categorize on the page so they can find the brands they want easier.
+
+[Back to top](#contents)
 
 ## User Experience
 
@@ -106,6 +113,8 @@ Below here is the completed user stories for this version of this project listed
 
 * As a user I will be able to categorize the brand of the balls.
 
+[Back to top](#contents)
+
 ### Site Structure
 
 #### Wireframes
@@ -152,6 +161,8 @@ I used Balsamiq to create my wireframes. I decided to make wireframes for larger
 
 ![wireframe shopping cart page](documentation/readme/wf.shoppingcart.png)
 
+[Back to top](#contents)
+
 #### Database Schema
 
 For this project, I utilized the built-in Django User Model for user accounts and created one model in the store app. In the store model, I built a customer model, order model, product model and category model.
@@ -163,6 +174,8 @@ If you want to see the true field choices, head over to the models.py in the sto
 The Database schema:
 
 ![Database schema](documentation/readme/database.schema.png)
+
+[Back to top](#contents)
 
 ### Design Choices
 
@@ -184,9 +197,13 @@ The color palette image was generated from [coolers.](https://coolors.co/) The c
 
 - All the buttons on the website are styled with bootstrap and the colors are chosen from the attribute they have.
 
+[Back to top](#contents)
+
 ### Project Management
 
 I used agile methodology throughout the development of this project utilizing GitHub projects and issues. You can read more about this in the AGILE.md file [here.](https://github.com/balennouri/pp4/blob/main/AGILE.md)
+
+[Back to top](#contents)
 
 ## Features
 
@@ -194,7 +211,7 @@ I used agile methodology throughout the development of this project utilizing Gi
 
 #### All The Pages
 
-* ##### The Navigation Bar
+##### The Navigation Bar
 
 The site navbar when user comes in to the page:
 
@@ -208,9 +225,9 @@ The site navbar when admin is logged in:
 
 ![navbar](documentation/readme-features/navbar-admin.png)
 
-* ##### The Main Content
+##### The Main Content
 
-* ###### Admin/Staff: Product Management
+###### Admin/Staff: Product Management
 
 * When a staff member is logged in they will see a extra link on the navbar, which is the admin link
 * This paged is only allowed if you are admin or staff member of the FastBall
@@ -228,14 +245,14 @@ Messages staff users see when they do something on the product management page:
 
 ![Update product mess](documentation/readme-features/mess-update-prod.png)
 
-* ###### Home page
+###### Home page
 
 * This is the first page the users see when they jump on the website
 * They can view all the products of the store here
 
 ![home page](documentation/readme-features/home-page.png)
 
-* ###### View Product page
+###### View Product page
 
 * This page is seen when the users view a product
 * They will be able to see comments on the product
@@ -243,20 +260,20 @@ Messages staff users see when they do something on the product management page:
 
 ![product page](documentation/readme-features/product.png)
 
-* ###### Info page
+###### Info page
 
 * This page is the information page for the store
 * Here can the users read about the owner and the information for the page
 
 ![info page](documentation/readme-features/info.png)
 
-* ###### Category page
+###### Category page
 
 * This is the categories page where the user has chosen their choice of category
 
 ![Category page](documentation/readme-features/category-page.png)
 
-* ###### Account pages
+###### Account pages
 
 The customer users can:
 
@@ -284,7 +301,7 @@ Messages users see if they do some changes for their account:
 
 ![account messages](documentation/readme-features/mess-account-delete.png)
 
-* ###### Cart page
+###### Cart page
 
 * The users can remove and update the quantity of their chosen products
 
@@ -300,7 +317,7 @@ Messages users see when they add/delete or update something in the cart:
 
 ![cart messages](documentation/readme-features/mess-cart-remove.png)
 
-* ###### Checkout page
+###### Checkout page
 
 * To be able to place an order on this page, users need to be logged in or sign up.
 
@@ -312,7 +329,7 @@ Message user see when they place order:
 
 ![Checkout message](documentation/readme-features/mess-checkout.png)
 
-* ###### Comment page
+###### Comment page
 
 * The user needs to be logged in or sign up to comment on products
 * The user can delete their latest comment
@@ -325,11 +342,19 @@ Message user see when they comment:
 
 ![comment message](documentation/readme-features/mess-comment.png)
 
-* ##### The Footer
+##### The Footer
 
 ![footer](documentation/readme-features/footer.png)
 
+[Back to top](#contents)
+
 ### Future Features
+
+There are some features I would like to add in the future. You can see all of them on my kanban board [here.](https://github.com/users/balennouri/projects/5) But below here can you see the future features I would prioritize first of them on the kanban board.
+
+* Stok update for the checkout. When a user order from the store the stock update it by self
+* Payment and Coupons, so that the user will be able to order with their credit card at the checkout and be able to use a copoun code at the checkout
+* Users will get email verification. Users can forget their password and reset it with their email
 
 ## Technologies Used
 * [Balsamiq](https://balsamiq.com/wireframes/)
@@ -358,6 +383,8 @@ Message user see when they comment:
 [Back to top](#contents)
 
 ## Testing
+
+[Back to top](#contents)
 
 ## Deployment and Development
 * The project was developed using [Gitpod](https://www.gitpod.io/#get-started) to create the code and overall file structure.
@@ -422,6 +449,8 @@ To set up a database, follow these steps:
 ### The Cloudinary API
 [Cloudinary](https://cloudinary.com/) is used in this project to store media assets. This is done due to the fact that Heroku does not store media files reliably.
 
+[Back to top](#contents)
+
 ## Credits
 
 To style the page and the content to Read me:
@@ -438,3 +467,5 @@ To write the code for this project:
 ## Acknowledgements
 
 This site was developed as my Fourth portfolio project for the Code Institute course in Full Stack Software Development. I would like to thank my mentor David Bowers, the slack community and the Code Institute team.
+
+[Back to top](#contents)
