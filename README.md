@@ -8,6 +8,38 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
 
 ## Contents
 
+* [Project Goals](#project-goals)
+* [User Experience](#user-experience)
+    * [User Stories](#user-stories)
+    * [Epics](#epics)
+    * [Site Structure](#site-structure)
+        * [Wireframes](#wireframes)
+        * [Database Schema](#database-schema)
+    * [Design Choices](#design-choices)
+        * [Typography](#typography)
+        * [Colour Palette](#colour-palette)
+* [Project Management](#project-management)
+* [Features](#features)
+    * [Existing Features](#existing-features)
+        * [All The Pages](#all-the-pages)
+        * []()
+        * []()
+        * []()
+        * []()
+        * []()
+        * []()
+    * [Future Features](#future-features)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Deployment and Development](#deployment-and-development)
+    * [Deploying the Site](#deployment)
+    * [Forking the Repository](#forking-the-repository)
+    * [Cloning the Repository](#cloning-the-repository)
+    * [The ElephantSQL Database](#the-elephantsql-database)
+    * [The Cloudinary API](#the-cloudinary-api)
+* [Credits](#credits)
+* [Acknoledgements](#acknowledgements)
+
 ## Project Goals
 
 - I wanted to create a website that allows the admin/staff to add/delete/change product and handle the user account easy on the admin panel and that is linked to a database.
@@ -160,7 +192,7 @@ I used agile methodology throughout the development of this project utilizing Gi
 
 ### Existing Features
 
-#### The Landing page And General Site  Content
+#### All The Pages
 
 * ##### The Navigation Bar
 
@@ -178,7 +210,11 @@ The site navbar when admin is logged in:
 
 * ##### The Main Content
 
-Admin/Staff: Product Management
+* ###### Admin/Staff: Product Management
+
+* When a staff member is logged in they will see a extra link on the navbar, which is the admin link
+* This paged is only allowed if you are admin or staff member of the FastBall
+* The staff member can add/remove and update products
 
 ![product management](documentation/readme-features/product-management.png)
 
@@ -192,23 +228,41 @@ Messages staff users see when they do something on the product management page:
 
 ![Update product mess](documentation/readme-features/mess-update-prod.png)
 
-Home page:
+* ###### Home page
+
+* This is the first page the users see when they jump on the website
+* They can view all the products of the store here
 
 ![home page](documentation/readme-features/home-page.png)
 
-View Product page:
+* ###### View Product page
+
+* This page is seen when the users view a product
+* They will be able to see comments on the product
+* They will be able to add product to their cart
 
 ![product page](documentation/readme-features/product.png)
 
-Info page:
+* ###### Info page
+
+* This page is the information page for the store
+* Here can the users read about the owner and the information for the page
 
 ![info page](documentation/readme-features/info.png)
 
-Category page:
+* ###### Category page
+
+* This is the categories page where the user has chosen their choice of category
 
 ![Category page](documentation/readme-features/category-page.png)
 
-Account pages:
+* ###### Account pages
+
+The customer users can:
+
+* Register, login and logout
+* View the home page, info page and categories
+* Perform a full crud functionality on their own account
 
 ![login page](documentation/readme-features/login.png)
 
@@ -230,7 +284,9 @@ Messages users see if they do some changes for their account:
 
 ![account messages](documentation/readme-features/mess-account-delete.png)
 
-Cart page:
+* ###### Cart page
+
+* The users can remove and update the quantity of their chosen products
 
 ![cart page](documentation/readme-features/cart-product.png)
 
@@ -244,7 +300,9 @@ Messages users see when they add/delete or update something in the cart:
 
 ![cart messages](documentation/readme-features/mess-cart-remove.png)
 
-Checkout page:
+* ###### Checkout page
+
+* To be able to place an order on this page, users need to be logged in or sign up.
 
 ![Checkout page](documentation/readme-features/checkout.png)
 
@@ -254,7 +312,10 @@ Message user see when they place order:
 
 ![Checkout message](documentation/readme-features/mess-checkout.png)
 
-Comment page:
+* ###### Comment page
+
+* The user needs to be logged in or sign up to comment on products
+* The user can delete their latest comment
 
 ![comment page](documentation/readme-features/comment-page-not.png)
 
@@ -267,10 +328,6 @@ Message user see when they comment:
 * ##### The Footer
 
 ![footer](documentation/readme-features/footer.png)
-
-#### User Accounts
-
-#### Background Features
 
 ### Future Features
 
