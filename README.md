@@ -521,6 +521,22 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 | 3 | Delete the latest comment | Click on delete the latest comment  | The latest comment is deleted | Pass |
 | 4 | Delete comment | Ensure that only user can delete their comments | Only that users latest comment is deleted | Pass |
 
+### Other Tests
+
+#### Lighthouse Test
+
+#### WAVE
+
+### Validator Testing
+
+#### CSS
+
+#### HTML
+
+#### Python Linter
+
+#### JSHint for Javascript
+
 [Back to top](#contents)
 
 ## Deployment and Development
