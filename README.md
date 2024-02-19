@@ -497,11 +497,11 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 
 | Test Step # | Test Description                                  | Action / Input                      | Expected Result                                       | Result  |
 |-------------|--------------------------------------------------|-------------------------------------|--------------------------------------------------------|---------|
-| 1 | Navigate to the add product/all product page on the admin link | Click on add product and all products | redirect to all product or add product page | Pass    |
-| 2 | Update one of the products | Change all the product details | The products details is changed on all pages | Pass    |
-| 3 | Add new product | click on on add product  | Product is added on all pages | Pass    |
-| 4 | Delete one of the products | Click on delete product | Product is deleted on all pages | Pass    |
-| 5 | Look if ElphantSQL database is updated | Product is added or deleted in the database | The products on the EplhantSQL database is deleted or added in the database | Pass    |
+| 1 | Navigate to the add product/all product page on the admin link | Click on add product and all products | redirect to all product or add product page | Pass |
+| 2 | Update one of the products | Change all the product details | The products details is changed on all pages | Pass |
+| 3 | Add new product | click on on add product  | Product is added on all pages | Pass |
+| 4 | Delete one of the products | Click on delete product | Product is deleted on all pages | Pass |
+| 5 | Look if ElphantSQL database is updated | Product is added or deleted in the database | The products on the EplhantSQL database is deleted or added in the database | Pass  |
 
 
 
