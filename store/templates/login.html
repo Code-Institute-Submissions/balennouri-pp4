@@ -12,10 +12,9 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container text-center">
     <div class="row">
-        <center>
-            <div class="col-md-6">
+            <div class="col-md-6 offset-md-3">
                 <br /><br />
                 <form method="POST" action="{% url 'login' %}">
                     {% csrf_token %}
@@ -37,7 +36,6 @@
                 <br /><br />
                 <br /><br />
             </div>
-        </center>
     </div>
 </div>
 

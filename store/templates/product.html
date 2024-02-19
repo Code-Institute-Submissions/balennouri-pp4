@@ -11,46 +11,43 @@
             <div class="col-md-8">
                 <br /><br /><br /><br />
                 <div class="card-body">
-                    <center>
-                        <h2 class="fw-bolder h5">{{ product.name }}</h2>
-                        <p class="card-text">{{ product.description }}</p>
+                    <h2 class="fw-bolder h5">{{ product.name }}</h2>
+                    <p class="card-text">{{ product.description }}</p>
 
-                        {% if product.is_sales %}
+                    {% if product.is_sales %}
 
-                        <div class="d-flex justify-content-center small text-success mb-2">
-                            <div class="bi-star-fill text-success"></div>
-                            &nbsp;&nbsp;On Sale!&nbsp;&nbsp;
-                            <div class="bi-star-fill text-success"></div>
+                    <div class="d-flex justify-content-center small text-success mb-2">
+                        <div class="bi-star-fill text-success"></div>
+                        &nbsp;&nbsp;On Sale!&nbsp;&nbsp;
+                        <div class="bi-star-fill text-success"></div>
+                    </div>
+                    <!-- Product price-->
+                    <p class="text-decoration-line-through">${{ product.price }}</p>
+                    ${{ product.sales_price }}
+
+                    {% else %}
+
+                    ${{ product.price }}
+
+                    {% endif %}
+
+                    <br><br>
+                    <div class="row justify-content-center">
+                        <div class="col-md-2">Quantity:</div>
+                        <div class="col-md-2">
+                            <select class="form-select form-select-sm" id="cart-qty">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                         </div>
-                        <!-- Product price-->
-                        <strike>${{ product.price }}</strike>
-                        &nbsp;
-                        ${{ product.sales_price }}
-
-                        {% else %}
-
-                        ${{ product.price }}
-
-                        {% endif %}
-
-                        <br><br>
-                        <div class="row justify-content-center">
-                            <div class="col-md-2">Quantity:</div>
-                            <div class="col-md-2">
-                                <select class="form-select form-select-sm" id="cart-qty">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br />
-                        <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
-                        <button type="button" value="{{ product.id }}" class="btn btn-success" id="add-cart">Add To
-                            Cart</button>
-                    </center>
+                    </div>
+                    <br />
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+                    <button type="button" value="{{ product.id }}" class="btn btn-success" id="add-cart">Add To
+                        Cart</button>
                 </div>
             </div>
         </div>
@@ -83,7 +80,6 @@
     <br><br>
 
     {% endif %}
-
 
     {% endfor %}
 

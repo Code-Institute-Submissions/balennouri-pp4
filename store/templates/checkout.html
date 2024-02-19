@@ -12,16 +12,24 @@
 </header>
 <div class="container">
     <br><br>
-    <div class="row">
-    </div>
     <div class="col-md-6 offset-md-3">
         {% if user.is_authenticated %}
         <h2 class="h5">INFO: Before placing the order read this below</h2>
-        <p>1. Write your phone number</p>
-        <p>2. One of our team members will contact you</p>
-        <p>3. We will contact you between 12.00 - 14.00 on weekdays</p>
-        <p>4. You will get asked how you want to make the payment for your order and where you want your package
-            to get dropped off</p>
+        <ul class="list-unstyled">
+            <li>
+                <p>1. Write your phone number</p>
+            </li>
+            <li>
+                <p>2. One of our team members will contact you</p>
+            </li>
+            <li>
+                <p>3. We will contact you between 12.00 - 14.00 on weekdays</p>
+            </li>
+            <li>
+                <p>4. You will get asked how you want to make the payment for your order and where you want your package
+                    to get dropped off</p>
+            </li>
+        </ul>
         <figure>
             <blockquote class="blockquote">
                 <p>NOTE: This is a school project!!</p>
@@ -49,13 +57,11 @@
             <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
         </center>
 
+        <br><br><br><br>
         {% endif %}
 
         <br /><br />
     </div>
 </div>
-</div>
-
-<br /><br />
 
 {% endblock %}

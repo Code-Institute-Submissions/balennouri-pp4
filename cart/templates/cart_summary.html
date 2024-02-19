@@ -28,7 +28,6 @@
             <div class="col-md-8">
                 <br /><br /><br /><br />
                 <div class="card-body">
-                    <center>
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description }}</p>
 
@@ -40,8 +39,7 @@
                             <div class="bi-star-fill text-success"></div>
                         </div>
                         <!-- Product price-->
-                        <strike>${{ product.price }}</strike>
-                        &nbsp;
+                        <p class="text-decoration-line-through">${{ product.price }}</p>
                         ${{ product.sales_price }}
 
                         {% else %}
@@ -81,7 +79,6 @@
                             class="btn btn-secondary update-cart">Update</button>
                         <button type="button" data-index="{{ product.id }}"
                             class="btn btn-danger delete-product">Remove</button>
-                    </center>
                 </div>
             </div>
         </div>

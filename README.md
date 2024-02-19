@@ -525,7 +525,16 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 
 #### Lighthouse Test
 
+I tried to fix my score on the lighthouse test by removing the CSS and JS files that came with the start bootstrap theme and tried to use links for the bootsrap and JS instead, but the result of that was not good and the layout and design changed a lot, so I kept the CSS and JS files that why the score is not the best.
+
+* Alot of unused CSS
+* Alot of unused JS
+
+![lighthouse](documentation/readme-features/lighthouse.png)
+
 #### WAVE
+
+![WAVE](documentation/readme-features/wave.png)
 
 ### Validator Testing
 

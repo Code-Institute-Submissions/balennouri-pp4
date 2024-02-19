@@ -40,8 +40,7 @@
                                 <div class="bi-star-fill text-success"></div>
                             </div>
                             <!-- Product price-->
-                            <strike>${{ product.price }}</strike>
-                            &nbsp;
+                            <p class="text-decoration-line-through">${{ product.price }}</p>
                             ${{ product.sales_price }}
                         </div>
                     </div>
@@ -59,7 +58,7 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"/>
+                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}" />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -83,7 +82,6 @@
             {% endfor %}
 
         </div>
-    </div>
     </div>
 </section>
 
