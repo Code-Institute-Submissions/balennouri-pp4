@@ -384,6 +384,117 @@ There are some features I would like to add in the future. You can see all of th
 
 ## Testing
 
+### Manual Testing for FastBall Website
+
+1. #### Navbar Functionality:
+   - **Test Scenario**: Ensure that all navbar buttons and links are functional and correctly linked with the users and admin/staff choice.
+   - **Test Steps**:
+     - Click on each navbar link, including Home, Info, Categories(Nike, Adidas, Puma), Profile, Admin and the Cart.
+     - Verify that each click navigates to the respective page without errors.
+     - Test the "Sign Up" and "Sign In" buttons in the navbar.
+     - Verify that clicking on "Sign Up" redirects users to the sign-up page.
+     - Verify that clicking on "Sign In" redirects users to the sign-in page.
+     - Test the functionality of the Cateories dropdown menu.
+     - Ensure that options such as "All Products", "Nike", "Adidas", "Puma" work as expected.
+
+2. #### Sign Up Functionality:
+   - **Test Scenario**: Validate the sign-up process, including account registration and form submisson.
+   - **Test Steps**:
+     - Fill out the sign-up form with valid user information.
+     - Submit the form and verify that no validation errors come up.
+     - Attempt to sign in with the newly created account.
+     - Ensure that sign-in is successful and redirects users to the home page.
+
+3. #### Sign In Functionality:
+   - **Test Scenario**: Validate the sign-in process.
+   - **Test Steps**:
+     - Navigate to the sign-in page.
+     - Enter valid (username and password) into the sign-in form.
+     - Submit the form and verify that no validation errors come up.
+     - Ensure that sign-in is successful and redirects users to the home page.
+     - Test sign-in with invalid (username and password) to verify that something went wrong when trying to login.
+
+4. #### Checkout Functionality:
+   - **Test Scenario**: Test the checkout process, including add to cart, remove from cart and update cart.
+   - **Test Steps**:
+     - Navigate to the cart page
+     - Ensure that the button back to the store works if the cart is empty.
+     - Ensure that the 2 button links work, when user try to checkout but are not logged in.
+     - Click on the checkout buttin verify that no errors come up.
+     - Submit the checkout form and ensure that no errore come up.
+     - Get the message when the order is placed.
+
+5. #### Product Management Functionality:
+   - **Test Scenario**: Test the product management, including add/remove and update products.
+   - **Test Steps**:
+     - Navigate to the All Products or Add Product page in the Admin dropdown menu.
+     - Ensure that product get updated on all pages.
+     - Ensure that product get added on all pages.
+     - Ensure that product get deleted from all pages.
+     - Ensure that the products is added or deleted in the database in ElphantSQL.
+
+6. #### Profile Management:
+   - **Test Scenario**: Validate the functionality related to managing user profiles, including updating, and deleting account.
+   - **Test Steps**:
+     - Navigate to the profile page.
+     - Ensure that the account's information is correct.
+     - Test editing account details such as username, name, last name and email.
+     - Verify that changes are saved successfully and reflected in the profile page.
+     - Verify that changes of password are saved successfully and that old password wont work.
+     - Test the "Delete Account" functionality.
+     - Verify account is deleted and can't logged in to.
+
+7. #### Product Comments Functionality:
+   - **Test Scenario**: Test of the comment process, including add new comment and delete latest comment.
+   - **Test Steps**:
+     - Navigate to the add comment page on a product page.
+     - Add new comment.
+     - Delete latest comment.
+     - Ensure that need to be logged in to comment.
+     - Ensure that only user can delete their comments.
+
+By doing this manual testing using the above scenarios and steps, you can ensure that the FastBall website is an error-free experience for the users and the staff.
+
+### Summary Table of Manual Testings for FastBall Website
+
+### Test Case #1: Navbar Functionality
+
+| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+|-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
+| 1           | Click navbar links                       | Click on each of the navbar link          | Navigate to respective pages            | Pass    |
+| 2           | Verify navigation                        | Verify each click navigation        | Navigate to respective pages           | Pass    |
+| 3           | Test "Sign Up" button                    | Click on "Sign Up"                  | Redirect to sign-up page                | Pass    |
+| 4           | Test "Sign In" button                    | Click on "Login"                  | Redirect to sign-in page                | Pass    |
+| 5           | Test categories dropdown menu               | Click on categories dropdown menu      | Ensure options work as expected         | Pass    |
+
+### Test Case #2: Sign Up Functionality
+
+| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+|-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
+| 1           | Fill out sign-up form                    | Enter valid user information       | Form submitted without errors           | Pass    |
+| 2           | Submit form                              | Click submit button                 | Account created successfully            | Pass    |
+| 3           | Attempt sign-in                          | Sign in with new account           | Sign-in successful, redirected to home page | Pass    |
+
+### Test Case #3: Sign In Functionality
+
+| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+|-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
+| 1           | Navigate to sign-in page                 | Click on "Sign In"                  | Sign-in page displayed                 | Pass    |
+| 2           | Enter valid login                  | Enter username and password           | Sign-in form submitted without errors   | Pass    |
+| 3           | Submit form                              | Click submit button                 | Sign-in successful, redirected to home page | Pass    |
+| 4           | Test sign-in with invalid login   | Enter incorrect username/password    | Get a message that the username or password is incorrect     | Pass    |
+
+### Test Case #4: Checkout Functionality
+
+| Test Step # | Test Description                          | Action / Input                      | Expected Result                         | Result  |
+|-------------|------------------------------------------|-------------------------------------|------------------------------------------|---------|
+| 1           | Navigate to cart page          | Click on checkout               | checkout page is displayed | Pass    |
+| 2           | If cart is empty verify that back to store button works                       | Click on back to store        | Redirect to home page             | Pass    |
+| 3           | Ensure that the 2 button links work, when user try to checkout but are not logged in                 | Click on Login/Sign up | Redirect to Login/Sign up | Pass    |
+| 4           | Submit the checkout form and ensure that no errore come up.          | Click on place order         | redirect to home page and get the message | Pass    |
+
+
+
 [Back to top](#contents)
 
 ## Deployment and Development
