@@ -8,6 +8,7 @@ class Cart:
     Gets the total price for the cart.
     Inspired from:
     https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     def __init__(self, request):
         """

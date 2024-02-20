@@ -12,6 +12,7 @@ def cart_summary(request):
     the cart.py.
     inspired from:
     https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     cart = Cart(request)
     cart_products = cart.get_prods
@@ -33,6 +34,7 @@ def cart_add(request):
     Updates the cart quantity and return the response.
     inspired from:
     https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     cart = Cart(request)
     if request.POST.get("action") == "post":
@@ -57,6 +59,7 @@ def cart_delete(request):
     Delete the chosen product from the cart.
     inspired from:
     https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     cart = Cart(request)
     if request.POST.get("action") == "post":
@@ -79,6 +82,7 @@ def cart_update(request):
     qty is updated.
     inspired from:
     https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     cart = Cart(request)
     if request.POST.get("action") == "post":

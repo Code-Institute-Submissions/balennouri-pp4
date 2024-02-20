@@ -74,6 +74,8 @@ def StaffAdmin(request):
     Only staff users is allowed on this page.
     The admin link is only visible
     When a staff member is logged in.
+    Inspired from:
+    https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
     """
     products = Product.objects.all()
     return render(
@@ -91,6 +93,8 @@ def deleteProduct(request, pk):
     aswell.
     The admin link is only visible
     When a staff member is logged in.
+    Inspired from:
+    https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
     """
     product = Product.objects.get(id=pk)
     product.delete()
@@ -103,6 +107,8 @@ def updateProduct(request, pk):
     """
     This function allows the staff member to update
     one of the product they want to change.
+    Inspired from:
+    https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
     """
     product = Product.objects.get(id=pk)
 
@@ -126,6 +132,8 @@ def addProduct(request):
     This function allows the staff members to add products.
     On the admin link (Add Product). The admin link is only visible
     When a staff member is logged in.
+    Inspired from:
+    https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
     """
     form = ProductForm()
     if request.method == "POST":
@@ -144,6 +152,9 @@ def password_update(request):
     """
     This function allows users to update their password on the profile
     page. When they update it, the new password will be saved.
+    Inspired from:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     if request.user.is_authenticated:
         user_active = request.user
@@ -174,6 +185,9 @@ def deleteUser(request):
     """
     This allows users to delete their account,
     When they performs that their account is gone.
+    Inspired from:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     user = request.user
     user.delete()
@@ -182,6 +196,12 @@ def deleteUser(request):
 
 
 def user_update(request):
+    """
+    Allows user to update their account and save it.
+    Inspired from:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
+    """
     if request.user.is_authenticated:
         active_user = User.objects.get(id=request.user.id)
         user_form = UserEditProfile(request.POST or None, instance=active_user)
@@ -259,8 +279,11 @@ def about(request):
 def checkout_views(request):
     """
     View the checkout page.
-    When a user fills out the form, the cart gets empty.    
+    When a user fills out the form, the cart gets empty.
     Delete the session key.
+    Inspired from:
+    https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     form = CheckoutForms()
     if request.method == "POST":
@@ -278,6 +301,9 @@ def login_user(request):
     View the login page.
     If the form is correctly written,
     The user will get logged in.
+    Inspired from:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     if request.method == "POST":
         username = request.POST["username"]
@@ -307,6 +333,9 @@ def login_user(request):
 def logout_user(request):
     """
     View a message when users logs out from their account.
+    Inspired from:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     logout(request)
     messages.success(request, ("You Have Been Logged Out!"))
@@ -318,6 +347,9 @@ def register_user(request):
     View the sign-up form, if the user does the form correctly,
     users' details and password will be saved and their account is
     registered.
+    Inspired from:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+    https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
     form = SignUpForm()
     if request.method == "POST":
