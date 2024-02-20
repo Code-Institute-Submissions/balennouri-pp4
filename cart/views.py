@@ -6,6 +6,13 @@ from django.contrib import messages
 
 
 def cart_summary(request):
+    """
+    View the cart summary, if products are added.
+    gets information from the Cart class in
+    the cart.py.
+    inspired from:
+    https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    """
     cart = Cart(request)
     cart_products = cart.get_prods
     quantities = cart.get_quants
@@ -24,6 +31,8 @@ def cart_add(request):
     Get the cart And test for POST
     lookup the product from database and save it to a session.
     Updates the cart quantity and return the response.
+    inspired from:
+    https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
     """
     cart = Cart(request)
     if request.POST.get("action") == "post":
@@ -44,6 +53,11 @@ def cart_add(request):
 
 
 def cart_delete(request):
+    """
+    Delete the chosen product from the cart.
+    inspired from:
+    https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    """
     cart = Cart(request)
     if request.POST.get("action") == "post":
         product_id = int(request.POST.get("product_id"))
@@ -60,6 +74,12 @@ def cart_delete(request):
 
 
 def cart_update(request):
+    """
+    Update the products in the cart if
+    qty is updated.
+    inspired from:
+    https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    """
     cart = Cart(request)
     if request.POST.get("action") == "post":
         product_id = int(request.POST.get("product_id"))

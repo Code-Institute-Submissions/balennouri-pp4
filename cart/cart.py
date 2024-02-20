@@ -2,6 +2,13 @@ from store.models import Product
 
 
 class Cart:
+    """
+    Class for adding/removing products to the cart.
+    Gets the qty the user have chosen for the product.
+    Gets the total price for the cart.
+    Inspired from:
+    https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
+    """
     def __init__(self, request):
         """
         Gets the current session key if it exists,

@@ -8,6 +8,9 @@ from django.contrib.auth.forms import (
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Form for comment section.
+    """
     class Meta:
         model = Comment
         fields = ["commenter_body"]
@@ -17,6 +20,9 @@ class CommentForm(forms.ModelForm):
 
 
 class CheckoutForms(forms.ModelForm):
+    """
+    Form for checkout page.
+    """
     class Meta:
         model = Customer
         fields = ["phone"]
@@ -26,6 +32,9 @@ class CheckoutForms(forms.ModelForm):
 
 
 class ProductForm(forms.ModelForm):
+    """
+    Form for add products page.
+    """
     class Meta:
         model = Product
         fields = "__all__"
@@ -48,8 +57,10 @@ class ProductForm(forms.ModelForm):
         }
 
 
-# Sign up class for registration
 class ChangePassword(SetPasswordForm):
+    """
+    Form for change the password.
+    """
     class Meta:
         model = User
         fields = ["new_password1", "new_password2"]
@@ -82,6 +93,9 @@ class ChangePassword(SetPasswordForm):
 
 
 class UserEditProfile(UserChangeForm):
+    """
+    Form for update profile details.
+    """
     password = None
     email = forms.EmailField(
         label="",
@@ -127,6 +141,9 @@ class UserEditProfile(UserChangeForm):
 
 
 class SignUpForm(UserCreationForm):
+    """
+    Form for the sign-up page.
+    """
     email = forms.EmailField(
         label="",
         widget=forms.TextInput(
