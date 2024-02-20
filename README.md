@@ -540,13 +540,31 @@ I tried to fix my score on the lighthouse test by removing the CSS and JS files 
 
 #### CSS
 
+I didn't choose to add a lot of my own CSS styling because of the bootstrap theme I chose to use, had a lot of styling already done. So, thanks to bootstraps, I could build the styling with bootstrap.
+
+![CSS Test](documentation/readme-features/css-test.png)
+
 #### HTML
 
 ![HTML Test](documentation/readme-features/html-test.png)
 
 #### Python Linter
 
+Error 1:
+
+![Python Test 1](documentation/readme-features/python-test-views-store.png)
+
+Solution 1:
+
+![Python Test 1](documentation/readme-features/python-test-fix.png)
+
 #### JSHint for Javascript
+
+The Javascript I used was in the script tags in cart_summary.html and product.html file. The result for them can you se below. 
+
+![Cart Js](documentation/readme-features/js-test-cart.png)
+
+![Product Js](documentation/readme-features/js-test-prod.png)
 
 [Back to top](#contents)
 

@@ -157,7 +157,7 @@ def category(request, foo):
             "category.html",
             {"products": products, "category": category},
         )
-    except:
+    except Category.DoesNotExist:
         messages.success(request, ("That Category Doesn't Exist.."))
         return redirect("home")
 
