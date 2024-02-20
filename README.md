@@ -593,6 +593,15 @@ The Javascript I used was in the script tags in cart_summary.html and product.ht
 
 ### Known Bugs
 
+* This known bugs is something that would be annoying for a user or a buyer because it takes some extra seconds.
+
+* I think that the problem that is causing this bug is the jquery scripts on both files.  
+
+| **Bug** | **Status** |
+| ----------- | ----------- |
+| When users add or update products on the product view page, it takes some extra seconds for the page to refresh | This is something I would like to fix but didn't find any solution for it. | 
+| The same problem is on the cart summary page, if users try to update or remove a product from the cart | This is something I would like to fix but didn't find any solution for it. | 
+
 ### Fixed Bugs
 
 | **Bug** | **Fix** |
@@ -611,7 +620,7 @@ The Javascript I used was in the script tags in cart_summary.html and product.ht
 ### Deployment
 The project was deployed using [Heroku](https://id.heroku.com/login).
 
-NB - to ensure a successful deployment of the project in Heroku, you need to ensure that you create a Procfile and a requirements.txt file.
+INFO - to ensure a successful deployment of the project in Heroku, you need to ensure that you create a Procfile and a requirements.txt file.
 
 Once you are certain that everything is ready to deploy the repo, you can do so through the following steps.
 
@@ -629,7 +638,7 @@ Once you are certain that everything is ready to deploy the repo, you can do so 
 11. Scroll down and click on "Deploy Branch" to manually deploy.
 12. Once the app has deployed successfully, Heroku will notify you and provide a button to view the app.
 
-NB - If you wish to rebuild the deployed app automatically every time you push to GitHub, you may click on "Enable Automatic Deploys" in Heroku.
+INFO - If you wish to rebuild the deployed app automatically every time you push to GitHub, you may click on "Enable Automatic Deploys" in Heroku.
 
 ### Forking the Repository
 To create a copy of the repository for viewing and editing without affecting the original repository you can fork the repository through the following steps:
