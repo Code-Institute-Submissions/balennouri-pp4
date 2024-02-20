@@ -595,6 +595,15 @@ The Javascript I used was in the script tags in cart_summary.html and product.ht
 
 ### Fixed Bugs
 
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| Removing products from the cart caused an error that the total price in the cart become $0, it was still products in the cart | By looking in the cart.py I saw that alot of the code was bad indented, that was caused by the "black ."  formater. |
+| Adding product to cart could also cause the same erro as above | This was fixed with same fix as above |
+| Users could delete all the comments on all products with one click | This was fixed by adding a if statement in the product.html file |
+| Users of the page could access the product management page by adding "/staff" to the url link. That was not good because they could delete and add products | This was fixed by adding "@user_passes_test(lambda u: u.is_staff, login_url='home')" in the views.py on function that i wanted to be secure |
+| When I deploy the website with my images from Cloudinary I got an error on Google chrome console. The error was that I used http instead of https | The error was solved by adding a meta tag to the base.html file. You can see it [here](https://github.com/balennouri/pp4/blob/main/store/templates/base.html)|
+
+
 ## Deployment and Development
 * The project was developed using [Gitpod](https://www.gitpod.io/#get-started) to create the code and overall file structure.
 * The repository for this project is hosted on [GitHub](https://github.com/).
