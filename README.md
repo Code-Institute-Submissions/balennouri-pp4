@@ -36,6 +36,9 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
     * [Future Features](#future-features)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
+* [Bugs](#bugs)
+    * [Known Bugs](#known-bugs)
+    * [Fixed Bugs](#fixed-bugs)
 * [Deployment and Development](#deployment-and-development)
     * [Deploying the Site](#deployment)
     * [Forking the Repository](#forking-the-repository)
@@ -525,6 +528,8 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 
 #### Lighthouse Test
 
+The performance, accessibility, best practices and SEO were tested with [Google Lighthouse.](https://developer.chrome.com/docs/lighthouse/overview) You can see the result below.
+
 I tried to fix my score on the lighthouse test by removing the CSS and JS files that came with the start bootstrap theme and tried to use links for the bootsrap and JS instead, but the result of that was not good and the layout and design changed a lot, so I kept the CSS and JS files that why the score is not the best.
 
 * Alot of unused CSS
@@ -534,7 +539,23 @@ I tried to fix my score on the lighthouse test by removing the CSS and JS files 
 
 #### WAVE
 
+To be sure that the page has good contrast i tested the page with [WAVE.](https://wave.webaim.org/report#/https://8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io/product/15/add-comment) You can see the result below.
+
 ![WAVE](documentation/readme-features/wave.png)
+
+#### Browsers And Devices
+
+Tested on the following browsers:
+
+* Google Chrome
+* Safari
+* Firefox
+
+Tested on the following devices:
+
+* Ipad Air
+* Iphone 12, 13 and 14
+* Samsung Galaxy
 
 ### Validator Testing
 
@@ -567,6 +588,12 @@ The Javascript I used was in the script tags in cart_summary.html and product.ht
 ![Product Js](documentation/readme-features/js-test-prod.png)
 
 [Back to top](#contents)
+
+## Bugs
+
+### Known Bugs
+
+### Fixed Bugs
 
 ## Deployment and Development
 * The project was developed using [Gitpod](https://www.gitpod.io/#get-started) to create the code and overall file structure.
