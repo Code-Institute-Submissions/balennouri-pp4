@@ -184,7 +184,9 @@ The Database schema:
 
 #### Typography
 
-The fonts used for this project came with the start bootsrap theme, and are the roboto, Helvetica Neue and sans-serif as a secondary font.
+The starting bootstrap theme used for this project was coming with different fonts, but I chose to change it to Roboto and a secondary font as Sans-serif if the browser didn't read them.
+
+I chose to change the fonts because I noticed that on Apple products the was not working.
 
 #### Colour Palette
 
@@ -600,7 +602,7 @@ The Javascript I used was in the script tags in cart_summary.html and product.ht
 | **Bug** | **Status** |
 | ----------- | ----------- |
 | When users add or update products on the product view page, it takes some extra seconds for the page to refresh | This is something I would like to fix but didn't find any solution for it. | 
-| The same problem is on the cart summary page, if users try to update or remove a product from the cart | This is something I would like to fix but didn't find any solution for it. | 
+| The same problem is on the cart summary page, if users try to update or remove a product from the cart | This is something I would like to fix but didn't find any solution for it. |
 
 ### Fixed Bugs
 
