@@ -10,6 +10,7 @@ class Cart:
     https://www.geeksforgeeks.org/how-to-add-cart-in-a-web-page-using-django/
     https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
     """
+
     def __init__(self, request):
         """
         Gets the current session key if it exists,

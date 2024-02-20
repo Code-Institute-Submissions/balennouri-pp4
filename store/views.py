@@ -10,6 +10,7 @@ https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
 link 2:
 https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
 """
+
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import user_passes_test
 from .models import Product, Category, Comment
@@ -35,7 +36,7 @@ def DeleteComments(request, pk):
     product_id = comment.product.id
     comment.delete()
     messages.success(request, "Your latest comment have been deleted")
-    return redirect(reverse('product', args=[product_id]))
+    return redirect(reverse("product", args=[product_id]))
 
 
 def AddComments(request, pk):
@@ -57,7 +58,7 @@ def AddComments(request, pk):
             )
             sms.save()
             messages.success(request, "Your comment have been added")
-            return redirect(reverse('product', args=[pk]))
+            return redirect(reverse("product", args=[pk]))
         else:
             pass
     else:
@@ -66,7 +67,7 @@ def AddComments(request, pk):
     return render(request, "add_comment.html", {"form": form})
 
 
-@user_passes_test(lambda u: u.is_staff, login_url='home')
+@user_passes_test(lambda u: u.is_staff, login_url="home")
 def StaffAdmin(request):
     """
     This function is viewing the product management page
@@ -85,7 +86,7 @@ def StaffAdmin(request):
     )
 
 
-@user_passes_test(lambda u: u.is_staff, login_url='home')
+@user_passes_test(lambda u: u.is_staff, login_url="home")
 def deleteProduct(request, pk):
     """
     This function allow the staff member to delete the product
@@ -102,7 +103,7 @@ def deleteProduct(request, pk):
     return redirect("staff")
 
 
-@user_passes_test(lambda u: u.is_staff, login_url='home')
+@user_passes_test(lambda u: u.is_staff, login_url="home")
 def updateProduct(request, pk):
     """
     This function allows the staff member to update
@@ -126,7 +127,7 @@ def updateProduct(request, pk):
     return render(request, "updateproduct.html", context)
 
 
-@user_passes_test(lambda u: u.is_staff, login_url='home')
+@user_passes_test(lambda u: u.is_staff, login_url="home")
 def addProduct(request):
     """
     This function allows the staff members to add products.
@@ -243,10 +244,7 @@ def product(request, pk):
     """
     product = Product.objects.get(id=pk)
     comment_num = Comment.objects.filter(product=product).count()
-    context = {
-        "product": product,
-        "comment_num": comment_num
-    }
+    context = {"product": product, "comment_num": comment_num}
     return render(request, "product.html", context)
 
 
@@ -287,11 +285,9 @@ def checkout_views(request):
     """
     form = CheckoutForms()
     if request.method == "POST":
-        del request.session['session_key']
-        messages.success(
-            request,
-            "Thank you for your request, We will contact you!"
-        )
+        del request.session["session_key"]
+        messages.success(request,
+                         "Thank you for your request, We will contact you!")
         return redirect("home")
     return render(request, "checkout.html", {"form": form})
 

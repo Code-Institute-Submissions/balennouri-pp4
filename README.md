@@ -537,7 +537,7 @@ I tried to fix my score on the lighthouse test by removing the CSS and JS files 
 * Alot of unused CSS
 * Alot of unused JS
 
-![lighthouse](documentation/readme-features/lighthouse.png)
+![lighthouse](documentation/readme-features/lighthouse-test.jpg)
 
 #### WAVE
 
@@ -593,6 +593,8 @@ The Javascript I used was in the script tags in cart_summary.html and product.ht
 
 ## Bugs
 
+All of these bugs can be found on the kanban board [here.](https://github.com/users/balennouri/projects/5)
+
 ### Known Bugs
 
 * This known bugs is something that would be annoying for a user or a buyer because it takes some extra seconds.
@@ -609,10 +611,12 @@ The Javascript I used was in the script tags in cart_summary.html and product.ht
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 | Removing products from the cart caused an error that the total price in the cart become $0, it was still products in the cart | By looking in the cart.py I saw that alot of the code was bad indented, that was caused by the "black ."  formater. |
-| Adding product to cart could also cause the same erro as above | This was fixed with same fix as above |
+| Adding a product to the cart could also cause the same error as above | This was fixed with. The same fix as above |
 | Users could delete all the comments on all products with one click | This was fixed by adding a if statement in the product.html file |
-| Users of the page could access the product management page by adding "/staff" to the url link. That was not good because they could delete and add products | This was fixed by adding "@user_passes_test(lambda u: u.is_staff, login_url='home')" in the views.py on function that i wanted to be secure |
+| (This can also count as a mistake from my side when i build the view) Users of the page could access the product management page by adding "/staff" to the url link. That was not good because they could delete and add products | This was fixed by adding "@user_passes_test(lambda u: u.is_staff, login_url='home')" in the views.py on function that i wanted to be secure |
 | When I deploy the website with my images from Cloudinary I got an error on Google chrome console. The error was that I used http instead of https | The error was solved by adding a meta tag to the base.html file. You can see it [here](https://github.com/balennouri/pp4/blob/main/store/templates/base.html)|
+| The Website had a problem showing the fonts that came with the boostrap theme for Apple products. | I solved this by importing my own Google fonts and adding them in the main.css |
+| When testing the website with all the different validators I had small mistakes like semicolons and spaces between the functions | Fixed this by formatting the files and went through them just to be sure |
 
 
 ## Deployment and Development
