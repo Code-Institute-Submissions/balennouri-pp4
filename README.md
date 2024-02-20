@@ -542,6 +542,8 @@ I tried to fix my score on the lighthouse test by removing the CSS and JS files 
 
 #### HTML
 
+![HTML Test](documentation/readme-features/html-test.png)
+
 #### Python Linter
 
 #### JSHint for Javascript

@@ -122,13 +122,13 @@
                 action: 'post'
             },
             success: function (json) {
-                location.reload()
+                location.reload();
             },
             error: function (xhr, errmsg, err) {
 
             }
         });
-    })
+    });
     // Delete products from the shopping cart
     $(document).on('click', '.delete-product', function (e) {
         e.preventDefault();
@@ -141,13 +141,13 @@
                 action: 'post'
             },
             success: function (json) {
-                location.reload()
+                location.reload();
             },
             error: function (xhr, errmsg, err) {
 
             }
         });
-    })
+    });
 </script>
 
 {% endblock %}
