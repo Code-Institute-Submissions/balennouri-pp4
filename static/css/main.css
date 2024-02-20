@@ -150,6 +150,13 @@ p {
   margin-bottom: 1rem;
 }
 
+footer {
+  position: absolute; 
+  left: 0; 
+  z-index: 10;
+  width: 100%;
+}
+
 /* Media Queries */
 @media (prefers-reduced-motion: no-preference) {
   :root {
