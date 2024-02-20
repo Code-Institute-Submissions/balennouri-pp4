@@ -10,7 +10,7 @@
         </div>
     </div>
 </header>
-<div class="container text-center">
+<div class="container">
     <br><br>
     <div class="col-md-6 offset-md-3">
         {% if user.is_authenticated %}
@@ -30,17 +30,15 @@
                     to get dropped off</p>
             </li>
         </ul>
-        <figure>
-            <blockquote class="blockquote">
-                <p>NOTE: This is a school project!!</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                <cite>Nobody will call you and ask for your details, This is just for school</cite>
-            </figcaption>
-            <figcaption class="blockquote-footer">
-                <cite>Thank You For Visiting The Page</cite>
-            </figcaption>
-        </figure>
+        <h2 class="h5">NOTE: This is a school project!!</h2>
+        <ul class="list-unstyled">
+            <li>
+                <p>Nobody will call you and ask for your details, This is just for school</p>
+            </li>
+            <li>
+                <p>Thank You For Visiting The Page</p>
+            </li>
+        </ul>
         <form method="POST" action="{% url 'checkout' %}">
             {% csrf_token %}
 
@@ -51,9 +49,11 @@
 
         {% else %}
 
-        <p>You must be logged in to place a order, Please sign up or login</p>
-        <a href="{% url 'register' %}" class="btn btn-success">Sign Up</a>
-        <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        <div class="text-center">
+            <p>You must be logged in to place a order, Please sign up or login</p>
+            <a href="{% url 'register' %}" class="btn btn-success">Sign Up</a>
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        </div>
         <br><br><br><br>
 
         {% endif %}

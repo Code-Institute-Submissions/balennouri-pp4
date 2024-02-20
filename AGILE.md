@@ -3,11 +3,19 @@
 
 ## Overview
 
-I used the project board on GitHub to split all my user stories. I used the GitHub board because it was simple and that was the way I learned through the LMS course. In the beginning, it was really difficult for me with the user stories, but after one day of it, I became more comfortable with it.
+For this FastBall project I used agile methodologies to develop it. I used the project board on GitHub to split all my user stories. I used the GitHub board because it was simple and that was the way I learned through the LMS course. In the beginning, it was really difficult for me with the user stories, but after one day of it, I became more comfortable with it.
 
-For the planning for the project, I split the user stories into diffrent labels, so I could put energy and time on the right things.
+I started to create detailed features for every task and features required for the project. I organize all the issues and put them into related groups and then in to their epics.
 
-Because of the good time I had on this project, I chose to add all of my user stories to one milestone and put that milestone date on 2024-02-25. I focused on finishing the issues on that day. I also realized that it is really challenging to be a one-person agile team.
+For the milestone, I had a lot of time for this project, so I decided to put all of them in one milestone and add the deadline for the project to 2024-02-25.
+
+For the issues, I used the MoSCoW method (must, should, could, won't) to priotize tasks within each epic.
+
+On the kanban board I had three important columns, with "To do", "In Progress" and "Done". This was good to have because I am always able to look at what is left and what I should do to make effective progress.
+
+While developing the website, I also added three new columns to the kanban board. That was important for me. They were "Epics", "Future" and "Known Bugs and Fixed Bugs". In the first column I added the epic stories. In the second column I added the user stories that I didn't have time to add to the website before the deadline. In the third column I added the bugs and known bugs so I could document them and use them later in the readme.
+
+Now, when I have done a project with agile methodologies and finished it, I also realize that it is really hard to be a one-person agile team.
 
 ## Sprint Notes
 
@@ -60,3 +68,22 @@ My fifth sprint I was focusing on the product management for the admin/staff, al
 * Read Me: Intro
 * Read Me: Technology Used
 * Read Me: Design Choiceso
+
+### Sprint 6 notes:
+
+My sixth sprint, I focused on getting the info page and the styling for the info page done.
+
+* User Story: Information for users
+* Template: Info page
+
+### Sprint 7 notes:
+
+My seventh sprint I did all the manual testing on the page and fixed all the content for the Readme file.
+This sprint was the toughest one because of all of the testing and writing.
+
+* Manual Testing: Change the qty of the product in the cart
+* Manual Testing: Delete Account
+* Manual Testing: Add/remove products to the cart
+* Manual Testing: Logout Account
+* Manual Testing: Register Account
+* Manual Testing: Test the website
