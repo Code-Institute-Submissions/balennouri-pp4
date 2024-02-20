@@ -1,14 +1,14 @@
 """
-Here is the views for the website, most of the views are in this file.
-You can fin some views in the views in the cart app aswell.
+Here are the views for the website. Most of the views are in this file.
+You can find some views on the cart app aswell.
 
-I got alot of insparations and ideas from this Youtube videos here:
+I got a lot of inspiration and ideas from these YouTube videos here:
 
-link 1: 'https://www.youtube.com/playlist?list=PL-
-51WBLyFTg0omnamUjL1TCVov7yDTRng'
+link 1:
+https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
 
-link 2: 'https://www.youtube.com/playlist?list=PL
-_KegS2ON4s53FNSqgXFdictTzUbGjoO-'
+link 2:
+https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
 """
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import user_passes_test
@@ -28,6 +28,9 @@ from .forms import (
 
 
 def DeleteComments(request, pk):
+    """
+    This function let the user delete the last comment they post.
+    """
     comment = Comment.objects.filter(product=pk).last()
     product_id = comment.product.id
     comment.delete()
@@ -36,6 +39,9 @@ def DeleteComments(request, pk):
 
 
 def AddComments(request, pk):
+    """
+    Ths function let the user add comments on the products.
+    """
     product = Product.objects.get(id=pk)
     form = CommentForm(instance=product)
     if request.method == "POST":
@@ -62,6 +68,13 @@ def AddComments(request, pk):
 
 @user_passes_test(lambda u: u.is_staff, login_url='home')
 def StaffAdmin(request):
+    """
+    This function is viewing the product management page
+    and gets all the product on the page.
+    Only staff users is allowed on this page.
+    The admin link is only visible
+    When a staff member is logged in.
+    """
     products = Product.objects.all()
     return render(
         request,
@@ -72,6 +85,13 @@ def StaffAdmin(request):
 
 @user_passes_test(lambda u: u.is_staff, login_url='home')
 def deleteProduct(request, pk):
+    """
+    This function allow the staff member to delete the product
+    they want to remove, this can be done on the product management page
+    aswell.
+    The admin link is only visible
+    When a staff member is logged in.
+    """
     product = Product.objects.get(id=pk)
     product.delete()
     messages.success(request, "Product Is Deleted")
@@ -80,6 +100,10 @@ def deleteProduct(request, pk):
 
 @user_passes_test(lambda u: u.is_staff, login_url='home')
 def updateProduct(request, pk):
+    """
+    This function allows the staff member to update
+    one of the product they want to change.
+    """
     product = Product.objects.get(id=pk)
 
     form = ProductForm(instance=product)
@@ -98,6 +122,11 @@ def updateProduct(request, pk):
 
 @user_passes_test(lambda u: u.is_staff, login_url='home')
 def addProduct(request):
+    """
+    This function allows the staff members to add products.
+    On the admin link (Add Product). The admin link is only visible
+    When a staff member is logged in.
+    """
     form = ProductForm()
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
@@ -112,6 +141,10 @@ def addProduct(request):
 
 
 def password_update(request):
+    """
+    This function allows users to update their password on the profile
+    page. When they update it, the new password will be saved.
+    """
     if request.user.is_authenticated:
         user_active = request.user
         if request.method == "POST":
@@ -138,6 +171,10 @@ def password_update(request):
 
 
 def deleteUser(request):
+    """
+    This allows users to delete their account,
+    When they performs that their account is gone.
+    """
     user = request.user
     user.delete()
     messages.success(request, "Your Account Is Deleted")
@@ -160,6 +197,10 @@ def user_update(request):
 
 
 def category(request, foo):
+    """
+    This function views the category page.
+    get the right category.
+    """
     foo = foo.replace("-", " ")
     try:
         category = Category.objects.get(name=foo)
@@ -175,6 +216,11 @@ def category(request, foo):
 
 
 def product(request, pk):
+    """
+    This function views the product page.
+    here can users see the product and the number of comments
+    on that product.
+    """
     product = Product.objects.get(id=pk)
     comment_num = Comment.objects.filter(product=product).count()
     context = {
@@ -185,6 +231,10 @@ def product(request, pk):
 
 
 def home(request):
+    """
+    Views the home page,
+    gets the products aswell.
+    """
     products = Product.objects.all()
     return render(
         request,
@@ -194,6 +244,11 @@ def home(request):
 
 
 def about(request):
+    """
+    View the info page.
+    My plan was to have about a page, but I chose
+    to go with an info page.
+    """
     return render(
         request,
         "about.html",
@@ -202,6 +257,11 @@ def about(request):
 
 
 def checkout_views(request):
+    """
+    View the checkout page.
+    When a user fills out the form, the cart gets empty.    
+    Delete the session key.
+    """
     form = CheckoutForms()
     if request.method == "POST":
         del request.session['session_key']
@@ -214,6 +274,11 @@ def checkout_views(request):
 
 
 def login_user(request):
+    """
+    View the login page.
+    If the form is correctly written,
+    The user will get logged in.
+    """
     if request.method == "POST":
         username = request.POST["username"]
         password = request.POST["password"]
@@ -240,12 +305,20 @@ def login_user(request):
 
 
 def logout_user(request):
+    """
+    View a message when users logs out from their account.
+    """
     logout(request)
     messages.success(request, ("You Have Been Logged Out!"))
     return redirect("home")
 
 
 def register_user(request):
+    """
+    View the sign-up form, if the user does the form correctly,
+    users' details and password will be saved and their account is
+    registered.
+    """
     form = SignUpForm()
     if request.method == "POST":
         form = SignUpForm(request.POST)
