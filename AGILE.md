@@ -17,6 +17,10 @@ While developing the website, I also added three new columns to the kanban board
 
 Now, when I have done a project with agile methodologies and finished it, I also realize that it is really hard to be a one-person agile team.
 
+[The Project Board Can Be Seen Here](https://github.com/users/balennouri/projects/5/views/1)
+
+[The Milestone Can Be Seen Here](https://github.com/balennouri/pp4/milestone/1)
+
 ## Sprint Notes
 
 Below is a summary of learnings from each iteration.
@@ -86,4 +90,4 @@ This sprint was the toughest one because of all of the testing and writing.
 * Manual Testing: Add/remove products to the cart
 * Manual Testing: Logout Account
 * Manual Testing: Register Account
-* Manual Testing: Test the website
+* Validator Testing: Test the website

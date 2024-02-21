@@ -362,28 +362,37 @@ There are some features I would like to add in the future. You can see all of th
 * Users will get email verification. Users can forget their password and reset it with their email
 
 ## Technologies Used
-* [Balsamiq](https://balsamiq.com/wireframes/)
-    * Used to create the wireframes during the planning stage of the project.
+
+### Languages
 * [HTML5](https://html.spec.whatwg.org/)
-    * Used to create structure and content for the site.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
-    * Used to add custom styles to the HTML.
-* [Django](https://www.djangoproject.com/)
-    * The python framework used to develop the site.
-* [Bootstrap](https://getbootstrap.com/)
-    * The CSS framework used to develop the site.
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-    * Used to provide functionality to the site.
 * [JavaScript](https://www.javascript.com/)
-    * Used to enhance functionality and interactivity.
+
+### Frameworks
+
+* [Django](https://www.djangoproject.com/)
+   * Django was used as the python framework in the project.
+* [Bootstrap](https://getbootstrap.com/)
+   * The CSS framework that was used for styling the website, saved me a lot of time when I learned to use it.
 * [Cloudinary](https://cloudinary.com/)
-    * Used to host media files.
-* [ElephantSQL](https://www.elephantsql.com/)
-    * Used to host the database used for the site in production.
+   * Cloudinary was used to save my media. It's a cloud-based platform for saving and storing images.
+* [Start Bootstrap](https://startbootstrap.com/)
+   * Start bootstrap was used for the project's theme. Start boostrap creates open source themes, templates and snippets.
+
+### Database
+ [ElephantSQL](https://www.elephantsql.com/)
+   * ElphantSQL is used as a database for the FastBall project. ElphantSQL is a PostgresSQL database that saves and stores databases.
+
+### Tools
 * [Gitpod](https://www.gitpod.io/#get-started)
-    * Used to create code/content and file structure for the respository.
+   * An online integrated development environment (IDE) used for developing and testing the FastBall project. 
 * [GitHub](https://github.com/)
-    * Used to store the repository.
+   * A web-based hosting service for version control repositories, used for storing and managing the project's source code.
+* [Balsamiq](https://balsamiq.com/wireframes/)
+   * A wireframing tool used for creating mockups and prototypes of the FastBall website.
+* [Heroku](https://dashboard.heroku.com/)
+   * Used for deploying the page and publish it. Heroku is a cloud platform that enables deployment and hosting of web applications.
 
 [Back to top](#contents)
 
@@ -563,7 +572,11 @@ Tested on the following devices:
 
 #### CSS
 
+In my static/css folder you will see two CSS files. The styles.css came with the bootsrap theme i used and the main.css file is my own custom one.
+
 I didn't choose to add a lot of my own CSS styling because of the bootstrap theme I chose to use, had a lot of styling already done. So, thanks to bootstraps, I could build the styling with bootstrap.
+
+This test is for my own custom CSS file, which is the main.css
 
 ![CSS Test](documentation/readme-features/css-test.png)
 
