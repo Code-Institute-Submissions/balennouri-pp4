@@ -1,16 +1,3 @@
-"""
-Here are the views for the website. Most of the views are in this file.
-You can find some views on the cart app aswell.
-
-I got a lot of inspiration and ideas from these YouTube videos here:
-
-link 1:
-https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
-
-link 2:
-https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
-"""
-
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import user_passes_test
 from .models import Product, Category, Comment
@@ -26,6 +13,18 @@ from .forms import (
     CheckoutForms,
     CommentForm,
 )
+"""
+Here are the views for the website. Most of the views are in this file.
+You can find some views on the cart app aswell.
+
+I got a lot of inspiration and ideas from these YouTube videos here:
+
+link 1:
+https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng
+
+link 2:
+https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
+"""
 
 
 def DeleteComments(request, pk):

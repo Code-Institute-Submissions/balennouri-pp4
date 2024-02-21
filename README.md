@@ -394,6 +394,28 @@ There are some features I would like to add in the future. You can see all of th
 * [Heroku](https://dashboard.heroku.com/)
    * Used for deploying the page and publish it. Heroku is a cloud platform that enables deployment and hosting of web applications.
 
+### Supporting Libraries and Packages
+
+* asgiref==3.7.2
+* autoflake==2.2.1
+* black==24.1.1
+* click==8.1.7
+* cloudinary==1.38.0
+* dj-database-url==0.5.0
+* dj3-cloudinary-storage==0.0.6
+* Django==4.2.9
+* django-allauth==0.60.1
+* gunicorn==20.1.0
+* oauthlib==3.2.2
+* pathspec==0.12.1
+* pillow==10.2.0
+* psycopg2==2.9.9
+* PyJWT==2.8.0
+* python3-openid==3.2.0
+* requests-oauthlib==1.3.1
+* sqlparse==0.4.4
+* whitenoise==6.6.0
+
 [Back to top](#contents)
 
 ## Testing
