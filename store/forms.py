@@ -5,6 +5,10 @@ from django.contrib.auth.forms import (
     UserCreationForm,
     UserChangeForm,
     SetPasswordForm)
+"""
+These forms were inspired by:
+https://docs.djangoproject.com/en/5.0/topics/forms/
+"""
 
 
 class CommentForm(forms.ModelForm):

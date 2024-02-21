@@ -35,7 +35,16 @@ The live site can be viewed [here](https://fastball-dc0773e894ca.herokuapp.com/)
         * [The Footer](#the-footer)
     * [Future Features](#future-features)
 * [Technologies Used](#technologies-used)
+   * [Languages](#languages)
+   * [Frameworks](#frameworks)
+   * [Database](#database)
+   * [Tools](#tools)
+   * [Supporting Libraries and Packages](#supporting-libraries-and-packages)
 * [Testing](#testing)
+   * [Manual Testing](#manual-testing-for-fastball-website)
+   * [Summary Table of Manual Testings](#summary-table-of-manual-testings-for-fastball-website)
+   * [Other Tests](#other-tests)
+   * [Validator Testing](#validator-testing)
 * [Bugs](#bugs)
     * [Known Bugs](#known-bugs)
     * [Fixed Bugs](#fixed-bugs)
@@ -655,10 +664,12 @@ All of these bugs can be found on the kanban board [here.](https://github.com/us
 
 
 ## Deployment and Development
+
 * The project was developed using [Gitpod](https://www.gitpod.io/#get-started) to create the code and overall file structure.
 * The repository for this project is hosted on [GitHub](https://github.com/).
 
 ### Deployment
+
 The project was deployed using [Heroku](https://id.heroku.com/login).
 
 INFO - to ensure a successful deployment of the project in Heroku, you need to ensure that you create a Procfile and a requirements.txt file.
@@ -682,12 +693,14 @@ Once you are certain that everything is ready to deploy the repo, you can do so 
 INFO - If you wish to rebuild the deployed app automatically every time you push to GitHub, you may click on "Enable Automatic Deploys" in Heroku.
 
 ### Forking the Repository
+
 To create a copy of the repository for viewing and editing without affecting the original repository you can fork the repository through the following steps:
 
 1. In the "FastBall" repository, click on the "fork" tab in the top right corner.
 2. Click on "create fork" to fork the repository in your own GitHub account.
 
 ### Cloning The Repository
+
 To clone the repository through GitHub, follow these steps:
 
 1. In the repository, select the "code" tab located just above the list of files and next to the gitpod button.
@@ -699,6 +712,7 @@ To clone the repository through GitHub, follow these steps:
 7. Press the "enter" key to create the clone.
 
 ### The ElephantSQL Database
+
 The [ElephantSQL](https://www.elephantsql.com/) PostgreSQL Database was used for this project.
 
 To set up a database, follow these steps:
@@ -724,6 +738,8 @@ To set up a database, follow these steps:
 To style the page and the content to Read me:
 
 - The screenshot at the top of the ReadMe was built from [Ami Responsive.](https://ui.dev/amiresponsive)
+- The database schema for the ReadMe was built from [drawSQL.](https://drawsql.app/)
+- The color palette image was generated from [coolers.](https://coolors.co/)
 
 To write the code for this project:
 
@@ -731,6 +747,14 @@ To write the code for this project:
 - [W3Schools](https://www.w3schools.com/)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 - [Coding 4 You](http://www.coding4you.at/inf_tag/beginners_python_cheat_sheet.pdf)
+- [Docs.Djangoproject](https://docs.djangoproject.com/en/5.0/topics/forms/)
+- [Docs.Djangoproject](https://docs.djangoproject.com/en/5.0/topics/auth/default/)
+
+Youtube videos that helped me alot:
+
+- [Django Ecommerce Website](https://www.youtube.com/playlist?list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng)
+- [E-commerce FullStack Website using Django](https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-)
+- [Django Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
 
 ## Acknowledgements
 
