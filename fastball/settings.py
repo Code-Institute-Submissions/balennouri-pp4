@@ -83,6 +83,8 @@ DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
 
 CSRF_TRUSTED_ORIGINS = [
+    "http://*",
+    "https://*",
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
     "https://8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io",
