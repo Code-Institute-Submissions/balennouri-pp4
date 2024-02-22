@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import user_passes_test
 from .models import Product, Category, Comment
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.views.decorators.csrf import requires_csrf_token
 from django.contrib.auth.models import User
 from datetime import datetime
 from .forms import (
@@ -291,6 +292,7 @@ def checkout_views(request):
     return render(request, "checkout.html", {"form": form})
 
 
+@requires_csrf_token
 def login_user(request):
     """
     View the login page.
