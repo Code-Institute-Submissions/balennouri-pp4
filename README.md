@@ -414,6 +414,7 @@ There are some features I would like to add in the future. You can see all of th
 * dj3-cloudinary-storage==0.0.6
 * Django==4.2.9
 * django-allauth==0.60.1
+* django-cors-headers==4.3.1
 * gunicorn==20.1.0
 * oauthlib==3.2.2
 * pathspec==0.12.1
