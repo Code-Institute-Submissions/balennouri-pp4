@@ -1,6 +1,17 @@
-# Agile Methodology
-* [Agile Methodology](#agile-methodology)
 
+# Agile Methodology
+
+* [Agile Methodology](#agile-methodology)
+  * [Overview](#overview)
+  * [Sprint Notes](#sprint-notes)
+    * [Sprint 1 notes:](#sprint-1-notes)
+    * [Sprint 2 notes:](#sprint-2-notes)
+    * [Sprint 3 notes:](#sprint-3-notes)
+    * [Sprint 4 notes:](#sprint-4-notes)
+    * [Sprint 5 notes:](#sprint-5-notes)
+    * [Sprint 6 notes:](#sprint-6-notes)
+    * [Sprint 7 notes:](#sprint-7-notes)
+    
 ## Overview
 
 For this FastBall project I used agile methodologies to develop it. I used the project board on GitHub to split all my user stories. I used the GitHub board because it was simple and that was the way I learned through the LMS course. In the beginning, it was really difficult for me with the user stories, but after one day of it, I became more comfortable with it.
@@ -82,7 +93,7 @@ My sixth sprint, I focused on getting the info page and the styling for the info
 
 ### Sprint 7 notes:
 
-My seventh sprint I did all the manual testing on the page and fixed all the content for the Readme file.
+My seventh sprint was my last sprint. I did all the manual testing on the page and fixed all the content for the Readme file.
 This sprint was the toughest one because of all of the testing and writing.
 
 * Manual Testing: Change the qty of the product in the cart
