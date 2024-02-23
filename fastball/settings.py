@@ -22,6 +22,7 @@ ALLOWED_HOSTS = [
     "8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io",
     "8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io",
     ".herokuapp.com",
+    "https://fastball-dc0773e894ca.herokuapp.com/*",
 ]
 
 
@@ -86,6 +87,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://*",
     "https://*",
     "https://*.codeanyapp.com",
+    "https://fastball-dc0773e894ca.herokuapp.com/*",
     "https://*.herokuapp.com",
     "https://8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io",
     "https://8000-balennouri-pp4-n1yzb2ky0sf.ws-eu108.gitpod.io",
