@@ -14,6 +14,7 @@ from .forms import (
     CheckoutForms,
     CommentForm,
 )
+
 """
 Here are the views for the website. Most of the views are in this file.
 You can find some views on the cart app aswell.

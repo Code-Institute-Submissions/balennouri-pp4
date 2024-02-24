@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "cloudinary_storage",
     "cloudinary",
-    'corsheaders',
+    "corsheaders",
     "store",
     "cart",
 ]

@@ -15,6 +15,7 @@ class CommentForm(forms.ModelForm):
     """
     Form for comment section.
     """
+
     class Meta:
         model = Comment
         fields = ["commenter_body"]
@@ -27,6 +28,7 @@ class CheckoutForms(forms.ModelForm):
     """
     Form for checkout page.
     """
+
     class Meta:
         model = Customer
         fields = ["phone"]
@@ -39,6 +41,7 @@ class ProductForm(forms.ModelForm):
     """
     Form for add products page.
     """
+
     class Meta:
         model = Product
         fields = "__all__"
@@ -65,6 +68,7 @@ class ChangePassword(SetPasswordForm):
     """
     Form for change the password.
     """
+
     class Meta:
         model = User
         fields = ["new_password1", "new_password2"]
@@ -100,6 +104,7 @@ class UserEditProfile(UserChangeForm):
     """
     Form for update profile details.
     """
+
     password = None
     email = forms.EmailField(
         label="",
@@ -148,6 +153,7 @@ class SignUpForm(UserCreationForm):
     """
     Form for the sign-up page.
     """
+
     email = forms.EmailField(
         label="",
         widget=forms.TextInput(
@@ -195,14 +201,15 @@ class SignUpForm(UserCreationForm):
         self.fields["password1"].widget.attrs["class"] = "form-control"
         self.fields["password1"].widget.attrs["placeholder"] = "Password"
         self.fields["password1"].label = ""
-        self.fields['password1'].help_text = (
-            '<ul class="form-text text-muted small">\
-                <li>Your password can\'t be too similar to your other \
+        self.fields["password1"].help_text = (
+            "<ul class=\"form-text text-muted small\">\
+                <li>Your password can't be too similar to your other \
                     personal information.</li>\
                         <li>Your password must contain at least 8 characters.\
-                            </li><li>Your password can\'t be a commonly \
-                                used password.</li><li>Your password can\'t \
-                                    be entirely numeric.</li></ul>')
+                            </li><li>Your password can't be a commonly \
+                                used password.</li><li>Your password can't \
+                                    be entirely numeric.</li></ul>"
+        )
 
         self.fields["password2"].widget.attrs["class"] = "form-control"
         self.fields["password2"].widget.attrs[
