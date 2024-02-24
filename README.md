@@ -297,11 +297,11 @@ The customer users can:
 
 ![login page](documentation/readme-features/login.png)
 
-![signup page](documentation/readme-features/signup.png)
+![signup page](documentation/readme-features/sign-up-page-new.png)
 
 ![profile page](documentation/readme-features/your-profile-page.png)
 
-![password page](documentation/readme-features/password-update.png)
+![password page](documentation/readme-features/password-update-new.png)
 
 Messages users see if they do some changes for their account:
 
@@ -431,6 +431,8 @@ There are some features I would like to add in the future. You can see all of th
 ## Testing
 
 ### Manual Testing for FastBall Website
+
+#### Test Schedule Plan:
 
 1. #### Navbar Functionality:
    - **Test Scenario**: Ensure that all navbar buttons and links are functional and correctly linked with the users and admin/staff choice.
@@ -614,15 +616,9 @@ This test is for my own custom CSS file, which is the main.css
 
 #### HTML
 
-All pages were free from errors, except those noted below:
+All pages were free from errors and got a good result from the HTML validator.
 
-Both sign-up and change password pages had the same errors. The errors came from the content of the forms that were made for those pages. I used the same content for them in the forms.py file. 
-
-You can see the errors below:
-
-![HTML Test](documentation/readme-features/html-test-signup%20form.png)
-
-
+![HTML Test](documentation/readme-features/html-test.png)
 
 #### Python Linter
 

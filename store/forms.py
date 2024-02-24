@@ -79,14 +79,7 @@ class ChangePassword(SetPasswordForm):
         self.fields["new_password1"].widget.attrs["class"] = "form-control"
         self.fields["new_password1"].widget.attrs["placeholder"] = "Password"
         self.fields["new_password1"].label = ""
-        self.fields["new_password1"].help_text = (
-            "<ul class=\"form-text text-muted small\"><li>Your password can't \
-                be too similar to your other personal information.</li><li>\
-                    Your password must contain at least 8 characters.</li><li>\
-                        Your password can't be a commonly used password.</li>\
-                            <li>Your password can't be entirely numeric.</li>\
-                                </ul>"
-        )
+        self.fields["new_password1"].help_text = None
 
         self.fields["new_password2"].widget.attrs["class"] = "form-control"
         self.fields["new_password2"].widget.attrs[
@@ -201,15 +194,7 @@ class SignUpForm(UserCreationForm):
         self.fields["password1"].widget.attrs["class"] = "form-control"
         self.fields["password1"].widget.attrs["placeholder"] = "Password"
         self.fields["password1"].label = ""
-        self.fields["password1"].help_text = (
-            "<ul class=\"form-text text-muted small\">\
-                <li>Your password can't be too similar to your other \
-                    personal information.</li>\
-                        <li>Your password must contain at least 8 characters.\
-                            </li><li>Your password can't be a commonly \
-                                used password.</li><li>Your password can't \
-                                    be entirely numeric.</li></ul>"
-        )
+        self.fields["password1"].help_text = None
 
         self.fields["password2"].widget.attrs["class"] = "form-control"
         self.fields["password2"].widget.attrs[
