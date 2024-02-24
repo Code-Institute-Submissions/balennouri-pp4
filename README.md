@@ -614,7 +614,15 @@ This test is for my own custom CSS file, which is the main.css
 
 #### HTML
 
-![HTML Test](documentation/readme-features/html-test.png)
+All pages were free from errors, except those noted below:
+
+Both sign-up and change password pages had the same errors. The errors came from the content of the forms that were made for those pages. I used the same content for them in the forms.py file. 
+
+You can see the errors below:
+
+![HTML Test](documentation/readme-features/html-test-signup%20form.png)
+
+
 
 #### Python Linter
 
