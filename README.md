@@ -439,27 +439,23 @@ There are some features I would like to add in the future. You can see all of th
    - **Test Steps**:
      - Click on each navbar link, including Home, Info, Categories(Nike, Adidas, Puma), Profile, Admin and the Cart.
      - Verify that each click navigates to the respective page without errors.
-     - Test the "Sign Up" and "Sign In" buttons in the navbar.
      - Verify that clicking on "Sign Up" redirects users to the sign-up page.
      - Verify that clicking on "Sign In" redirects users to the sign-in page.
-     - Test the functionality of the Cateories dropdown menu.
-     - Ensure that options such as "All Products", "Nike", "Adidas", "Puma" work as expected.
+     - Test the functionality of the Cateories dropdown menu and ensure that options such as "All Products", "Nike", "Adidas", "Puma" work as expected.
 
 2. #### Sign Up Functionality:
    - **Test Scenario**: Validate the sign-up process, including account registration and form submisson.
    - **Test Steps**:
      - Fill out the sign-up form with valid user information.
      - Submit the form and verify that no validation errors come up.
-     - Attempt to sign in with the newly created account.
-     - Ensure that sign-in is successful and redirects users to the home page.
+     - Attempt to sign in with the newly created account. Ensure that sign-in is successful and redirects users to the home page.
 
 3. #### Sign In Functionality:
    - **Test Scenario**: Validate the sign-in process.
    - **Test Steps**:
      - Navigate to the sign-in page.
      - Enter valid (username and password) into the sign-in form.
-     - Submit the form and verify that no validation errors come up.
-     - Ensure that sign-in is successful and redirects users to the home page.
+     - Submit the form and verify that no validation errors come up. Ensure that sign-in is successful and redirects users to the home page.
      - Test sign-in with invalid (username and password) to verify that something went wrong when trying to login.
 
 4. #### Checkout Functionality:
@@ -469,8 +465,7 @@ There are some features I would like to add in the future. You can see all of th
      - Ensure that the button back to the store works if the cart is empty.
      - Ensure that the 2 button links work, when user try to checkout but are not logged in.
      - Click on the checkout buttin verify that no errors come up.
-     - Submit the checkout form and ensure that no errore come up.
-     - Get the message when the order is placed.
+     - Submit the checkout form and ensure that no errore come up. Get the success message when the order is placed.
 
 5. #### Product Management Functionality:
    - **Test Scenario**: Test the product management, including add/remove and update products.
@@ -485,21 +480,16 @@ There are some features I would like to add in the future. You can see all of th
    - **Test Scenario**: Validate the functionality related to managing user profiles, including updating, and deleting account.
    - **Test Steps**:
      - Navigate to the profile page.
-     - Ensure that the account's information is correct.
-     - Test editing account details such as username, name, last name and email.
-     - Verify that changes are saved successfully and reflected in the profile page.
+     - Ensure that the account's information is correct. Test editing account details such as username, name, last name and email. Verify that changes are saved successfully and reflected in the profile page.
      - Verify that changes of password are saved successfully and that old password wont work.
-     - Test the "Delete Account" functionality.
-     - Verify account is deleted and can't logged in to.
+     - Test the "Delete Account" functionality. Verify account is deleted and can't logged in to.
 
 7. #### Product Comments Functionality:
    - **Test Scenario**: Test of the comment process, including add new comment and delete latest comment.
    - **Test Steps**:
      - Navigate to the add comment page on a product page.
      - Add new comment.
-     - Delete latest comment.
-     - Ensure that need to be logged in to comment.
-     - Ensure that only user can delete their comments.
+     - Ensure that user need to be logged in to comment.
 
 By doing this manual testing using the above scenarios and steps, you can ensure that the FastBall website is an error-free experience for the users and the staff.
 
@@ -539,13 +529,14 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 | 1 | Navigate to cart page | Click on checkout | checkout page is displayed | Pass |
 | 2 | If cart is empty verify that back to store button works | Click on back to store | Redirect to home page | Pass |
 | 3 | Ensure that the 2 button links work, when user try to checkout but are not logged in | Click on Login/Sign up | Redirect to Login/Sign up | Pass |
-| 4 | Submit the checkout form and ensure that no errore come up. | Click on place order | redirect to home page and get the message | Pass |
+| 4 | Click on checkout, ensure that no errors comes up | Click on checkout button | Redirect user to checkout page | Pass |
+| 5 | Submit the checkout form and ensure that no errore come up. | Click on place order | redirect to home page and get the message | Pass |
 
 ### Test Case #5: Product Management Functionality
 
 | Test Step # | Test Description                                  | Action / Input                      | Expected Result                                       | Result  |
 |-------------|--------------------------------------------------|-------------------------------------|--------------------------------------------------------|---------|
-| 1 | Navigate to the add product/all product page on the admin link | Click on add product and all products | redirect to all product or add product page | Pass |
+| 1 | Navigate to the add product/product management page on the admin link | Click on add product and product management | redirect to product management or add product page | Pass |
 | 2 | Update one of the products | Change all the product details | The products details is changed on all pages | Pass |
 | 3 | Add new product | click on on add product  | Product is added on all pages | Pass |
 | 4 | Delete one of the products | Click on delete product | Product is deleted on all pages | Pass |
@@ -560,14 +551,13 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 | 3 | Click on change pssword | Change password  | Password is changed | Pass |
 | 4 | Click on delete account | Delete the account | Account is deleted and you can't login into the account anymore. | Pass |
 
-### Test Case #6: Product Comments Functionality:
+### Test Case #7: Product Comments Functionality:
 
 | Test Step # | Test Description                                  | Action / Input                      | Expected Result                                       | Result  |
 |-------------|--------------------------------------------------|-------------------------------------|--------------------------------------------------------|---------|
 | 1 | Navigate to comment page on a product page | Click on add comment | redirect to comment page | Pass |
-| 2 | Add new comment | Click on add comment | A comment is added and redirect to that product you commented on | Pass |
-| 3 | Delete the latest comment | Click on delete the latest comment  | The latest comment is deleted | Pass |
-| 4 | Delete comment | Ensure that only user can delete their comments | Only that users latest comment is deleted | Pass |
+| 3 | Ensure users need to be logged in to comment | Click on add comment  | Show page for users that need to be logged in | Pass |
+| 3 | Add new comment | Click on add comment | A comment is added and redirect to that product you commented on | Pass |
 
 ### Other Tests
 
