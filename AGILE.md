@@ -78,6 +78,7 @@ In the fourth sprint, I put my focus on getting my bootstrap theme I had chosen 
 My fifth sprint I was focusing on the product management for the admin/staff, allowing them to add products, update them and remove them from the store. I also started to write some content for the readme because i was tired of coding and needed to do something else to have the right focus.
 
 * User Story: Product Management
+* User Story: Comment On Products
 * User Story: Make Order
 * Read Me: Deployment And Development
 * Read Me: Intro
