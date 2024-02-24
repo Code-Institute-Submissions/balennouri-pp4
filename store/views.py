@@ -29,17 +29,6 @@ https://www.youtube.com/playlist?list=PL_KegS2ON4s53FNSqgXFdictTzUbGjoO-
 """
 
 
-def DeleteComments(request, pk):
-    """
-    This function let the user delete the last comment they post.
-    """
-    comment = Comment.objects.filter(product=pk).last()
-    product_id = comment.product.id
-    comment.delete()
-    messages.success(request, "Your latest comment have been deleted")
-    return redirect(reverse("product", args=[product_id]))
-
-
 def AddComments(request, pk):
     """
     Ths function let the user add comments on the products.

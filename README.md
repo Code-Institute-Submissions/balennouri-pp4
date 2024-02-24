@@ -346,7 +346,6 @@ Message user see when they place order:
 ###### Comment page
 
 * The user needs to be logged in or sign up to comment on products
-* The user can delete their latest comment
 
 ![comment page](documentation/readme-features/comment-page-not.png)
 
@@ -600,6 +599,8 @@ In my static/css folder you will see two CSS files. The styles.css came with the
 
 I didn't choose to add a lot of my own CSS styling because of the bootstrap theme I chose to use, had a lot of styling already done. So, thanks to bootstraps, I could build the styling with bootstrap.
 
+When I tested the CSS with the URL link for the page, I got a lot of error messages. The errors came from the bootstrap and JS that came with the theme I chose. However, I tested my own CSS file and got a good result for it.
+
 This test is for my own custom CSS file, which is the main.css
 
 ![CSS Test](documentation/readme-features/css-test.png)
@@ -612,6 +613,10 @@ All pages were free from errors and got a good result from the HTML validator.
 
 #### Python Linter
 
+I tested all of my python files with the [CI Python Linter](https://pep8ci.herokuapp.com/#) and got no error from those tests. It was only some of Django's own python files that came with the apps and the project that had some codes that were longer than 80 characters and I let them be as they were because Django seems to think shortening these lines is ill advisable.
+
+When I tested my python files, I had one error on the views.py file that I solved. You can see the error and the solution to this below.
+
 Error 1:
 
 ![Python Test 1](documentation/readme-features/python-test-views-store.png)
@@ -621,6 +626,8 @@ Solution 1:
 ![Python Test 1](documentation/readme-features/python-test-fix.png)
 
 #### JSHint for Javascript
+
+The JS files that are in the staticfiles folder came with the bootstrap theme I chose. I didn't test them because they were the bootstrap content.
 
 The Javascript I used was in the script tags in cart_summary.html and product.html file. The result for them can you se below. 
 

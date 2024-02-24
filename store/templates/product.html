@@ -74,13 +74,6 @@
     <p>{{ comment.commenter_body }}</p>
     <hr>
 
-    {% if request.user.username == comment.commenter_name %}
-
-    <a href="{% url 'delete-comment' product.pk %}" class="btn btn-danger">Delete Your Latest Comment</a>
-    <br><br>
-
-    {% endif %}
-
     {% endfor %}
 
     {% endif %}

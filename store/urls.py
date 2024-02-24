@@ -13,8 +13,6 @@ urlpatterns = [
     path("logout/", views.logout_user, name="logout"),
     path("product/<int:pk>/add-comment",
          views.AddComments, name="add-comment"),
-    path("product/<int:pk>/delete-comment",
-         views.DeleteComments, name="delete-comment"),
     path("product/<int:pk>", views.product, name="product"),
     path("password_update/", views.password_update, name="password_update"),
     path("updateproduct/<int:pk>", views.updateProduct, name="updateproduct"),
