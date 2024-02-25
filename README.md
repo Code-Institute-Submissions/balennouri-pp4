@@ -565,12 +565,25 @@ By doing this manual testing using the above scenarios and steps, you can ensure
 
 The performance, accessibility, best practices and SEO were tested with [Google Lighthouse.](https://developer.chrome.com/docs/lighthouse/overview) You can see the result below.
 
-I tried to fix my score on the lighthouse test by removing the CSS and JS files that came with the start bootstrap theme and tried to use links for the bootsrap and JS instead, but the result of that was not good and the layout and design changed a lot, so I kept the CSS and JS files that why the score is not the best.
+I tried to fix my score on the lighthouse test by removing the CSS and JS files that came with the start bootstrap theme and tried to use links for the bootstrap and JS instead, but the result of that was not good and the layout and design changed a lot is so I kept the CSS and JS files. That why the score is not as high I wanted it to be.
 
 * Alot of unused CSS
 * Alot of unused JS
+Home Page:
 
-![lighthouse](documentation/readme-features/lighthouse-test.jpg)
+![lighthouse](documentation/readme-features/lighthouse-test-info.png)
+
+Info Page:
+
+![lighthouse](documentation/readme-features/lighthouse-test-info.png)
+
+Login Page:
+
+![lighthouse](documentation/readme-features/lighthouse-test-signup.png)
+
+Sign-Up Page:
+
+![lighthouse](documentation/readme-features/lighthouse-test-signup.png)
 
 #### WAVE
 
