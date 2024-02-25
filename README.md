@@ -676,6 +676,9 @@ The project was deployed using [Heroku](https://id.heroku.com/login).
 
 INFO - to ensure a successful deployment of the project in Heroku, you need to ensure that you create a Procfile and a requirements.txt file.
 
+* In the Procfile insert the following:
+  * ``` web: gunicorn PROJECT_NAME.wsgi ```
+
 Once you are certain that everything is ready to deploy the repo, you can do so through the following steps.
 
 1. Log in to Heroku or create an account if necessary.
